@@ -11,6 +11,14 @@
 		B021D58B1C8590C7008CF0D5 /* wavelabs_ios_client_app.h in Headers */ = {isa = PBXBuildFile; fileRef = B021D58A1C8590C7008CF0D5 /* wavelabs_ios_client_app.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B021D5911C8590C7008CF0D5 /* wavelabs_ios_client_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B021D5851C8590C7008CF0D5 /* wavelabs_ios_client_app.framework */; };
 		B021D5981C8590C7008CF0D5 /* wavelabs_ios_client_appTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B021D5971C8590C7008CF0D5 /* wavelabs_ios_client_appTests.swift */; };
+		B031EC9E1C859EF8002DDBB6 /* MediaApiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B031EC961C859EF8002DDBB6 /* MediaApiModel.swift */; };
+		B031EC9F1C859EF8002DDBB6 /* MediaFileDetailsApiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B031EC971C859EF8002DDBB6 /* MediaFileDetailsApiModel.swift */; };
+		B031ECA01C859EF8002DDBB6 /* MemberApiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B031EC981C859EF8002DDBB6 /* MemberApiModel.swift */; };
+		B031ECA11C859EF8002DDBB6 /* MessagesApiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B031EC991C859EF8002DDBB6 /* MessagesApiModel.swift */; };
+		B031ECA21C859EF8002DDBB6 /* NewMemberApiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B031EC9A1C859EF8002DDBB6 /* NewMemberApiModel.swift */; };
+		B031ECA31C859EF8002DDBB6 /* SocialApiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B031EC9B1C859EF8002DDBB6 /* SocialApiModel.swift */; };
+		B031ECA41C859EF8002DDBB6 /* TokenApiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B031EC9C1C859EF8002DDBB6 /* TokenApiModel.swift */; };
+		B031ECA51C859EF8002DDBB6 /* ValidationMessagesApiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B031EC9D1C859EF8002DDBB6 /* ValidationMessagesApiModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +40,14 @@
 		B021D5901C8590C7008CF0D5 /* wavelabs_ios_client_appTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = wavelabs_ios_client_appTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B021D5961C8590C7008CF0D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B021D5971C8590C7008CF0D5 /* wavelabs_ios_client_appTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wavelabs_ios_client_appTests.swift; sourceTree = "<group>"; };
+		B031EC961C859EF8002DDBB6 /* MediaApiModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaApiModel.swift; sourceTree = "<group>"; };
+		B031EC971C859EF8002DDBB6 /* MediaFileDetailsApiModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaFileDetailsApiModel.swift; sourceTree = "<group>"; };
+		B031EC981C859EF8002DDBB6 /* MemberApiModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemberApiModel.swift; sourceTree = "<group>"; };
+		B031EC991C859EF8002DDBB6 /* MessagesApiModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagesApiModel.swift; sourceTree = "<group>"; };
+		B031EC9A1C859EF8002DDBB6 /* NewMemberApiModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewMemberApiModel.swift; sourceTree = "<group>"; };
+		B031EC9B1C859EF8002DDBB6 /* SocialApiModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialApiModel.swift; sourceTree = "<group>"; };
+		B031EC9C1C859EF8002DDBB6 /* TokenApiModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokenApiModel.swift; sourceTree = "<group>"; };
+		B031EC9D1C859EF8002DDBB6 /* ValidationMessagesApiModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidationMessagesApiModel.swift; sourceTree = "<group>"; };
 		EB34D46CD30F1FFCC60522DA /* Pods_wavelabs_ios_client_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_wavelabs_ios_client_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -96,6 +112,14 @@
 			isa = PBXGroup;
 			children = (
 				B021D58A1C8590C7008CF0D5 /* wavelabs_ios_client_app.h */,
+				B031EC961C859EF8002DDBB6 /* MediaApiModel.swift */,
+				B031EC971C859EF8002DDBB6 /* MediaFileDetailsApiModel.swift */,
+				B031EC981C859EF8002DDBB6 /* MemberApiModel.swift */,
+				B031EC991C859EF8002DDBB6 /* MessagesApiModel.swift */,
+				B031EC9A1C859EF8002DDBB6 /* NewMemberApiModel.swift */,
+				B031EC9B1C859EF8002DDBB6 /* SocialApiModel.swift */,
+				B031EC9C1C859EF8002DDBB6 /* TokenApiModel.swift */,
+				B031EC9D1C859EF8002DDBB6 /* ValidationMessagesApiModel.swift */,
 				B021D5881C8590C7008CF0D5 /* Supporting Files */,
 			);
 			path = wavelabs_ios_client_app;
@@ -268,6 +292,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B031ECA11C859EF8002DDBB6 /* MessagesApiModel.swift in Sources */,
+				B031ECA21C859EF8002DDBB6 /* NewMemberApiModel.swift in Sources */,
+				B031ECA51C859EF8002DDBB6 /* ValidationMessagesApiModel.swift in Sources */,
+				B031EC9F1C859EF8002DDBB6 /* MediaFileDetailsApiModel.swift in Sources */,
+				B031ECA31C859EF8002DDBB6 /* SocialApiModel.swift in Sources */,
+				B031ECA01C859EF8002DDBB6 /* MemberApiModel.swift in Sources */,
+				B031ECA41C859EF8002DDBB6 /* TokenApiModel.swift in Sources */,
+				B031EC9E1C859EF8002DDBB6 /* MediaApiModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -383,6 +415,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 541EEC4A9D1D664F2EB5268E /* Pods-wavelabs_ios_client_app.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -392,6 +425,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -399,6 +433,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6355E62698560186F73C914C /* Pods-wavelabs_ios_client_app.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
