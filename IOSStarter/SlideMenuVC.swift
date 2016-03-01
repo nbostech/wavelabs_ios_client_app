@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 import DigitsKit
-import StarteriOSClientAPI
+import wavelabs_ios_client_api
 import MBProgressHUD
 
 class SlideMenuVC: UIViewController,UITableViewDelegate,getAuthApiResponseDelegate{

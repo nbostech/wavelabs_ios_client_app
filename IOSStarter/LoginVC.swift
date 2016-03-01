@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import TwitterKit
 import DigitsKit
-import StarteriOSClientAPI
+import wavelabs_ios_client_api
 import FBSDKCoreKit
 import FBSDKLoginKit
 import MBProgressHUD

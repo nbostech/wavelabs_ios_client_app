@@ -8,7 +8,7 @@
 
 import Foundation
 import UIKit
-import StarteriOSClientAPI
+import wavelabs_ios_client_api
 import MBProgressHUD
 
 class DigitsSignUpVC: UIViewController,getSocialApiResponseDelegate{

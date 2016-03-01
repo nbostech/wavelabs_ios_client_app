@@ -11,7 +11,7 @@ import Fabric
 import TwitterKit
 import DigitsKit
 //import OAuthSwift
-import StarteriOSClientAPI
+import wavelabs_ios_client_api
 
 
 @UIApplicationMain
