@@ -11,20 +11,6 @@
 		B021D58B1C8590C7008CF0D5 /* wavelabs_ios_client_app.h in Headers */ = {isa = PBXBuildFile; fileRef = B021D58A1C8590C7008CF0D5 /* wavelabs_ios_client_app.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B021D5911C8590C7008CF0D5 /* wavelabs_ios_client_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B021D5851C8590C7008CF0D5 /* wavelabs_ios_client_app.framework */; };
 		B021D5981C8590C7008CF0D5 /* wavelabs_ios_client_appTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B021D5971C8590C7008CF0D5 /* wavelabs_ios_client_appTests.swift */; };
-		B09D4D1D1C8597E500D41FFC /* Communicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09D4D1B1C8597E500D41FFC /* Communicator.swift */; };
-		B09D4D1E1C8597E500D41FFC /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09D4D1C1C8597E500D41FFC /* Utilities.swift */; };
-		B09D4D281C85981100D41FFC /* MediaApiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09D4D201C85981100D41FFC /* MediaApiModel.swift */; };
-		B09D4D291C85981100D41FFC /* MediaFileDetailsApiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09D4D211C85981100D41FFC /* MediaFileDetailsApiModel.swift */; };
-		B09D4D2A1C85981100D41FFC /* MemberApiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09D4D221C85981100D41FFC /* MemberApiModel.swift */; };
-		B09D4D2B1C85981100D41FFC /* MessagesApiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09D4D231C85981100D41FFC /* MessagesApiModel.swift */; };
-		B09D4D2C1C85981100D41FFC /* NewMemberApiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09D4D241C85981100D41FFC /* NewMemberApiModel.swift */; };
-		B09D4D2D1C85981100D41FFC /* SocialApiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09D4D251C85981100D41FFC /* SocialApiModel.swift */; };
-		B09D4D2E1C85981100D41FFC /* TokenApiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09D4D261C85981100D41FFC /* TokenApiModel.swift */; };
-		B09D4D2F1C85981100D41FFC /* ValidationMessagesApiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09D4D271C85981100D41FFC /* ValidationMessagesApiModel.swift */; };
-		B09D4D351C85982700D41FFC /* AuthAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09D4D311C85982700D41FFC /* AuthAPI.swift */; };
-		B09D4D361C85982700D41FFC /* UsersApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09D4D321C85982700D41FFC /* UsersApi.swift */; };
-		B09D4D371C85982700D41FFC /* MediaApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09D4D331C85982700D41FFC /* MediaApi.swift */; };
-		B09D4D381C85982700D41FFC /* SocialApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09D4D341C85982700D41FFC /* SocialApi.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,20 +32,6 @@
 		B021D5901C8590C7008CF0D5 /* wavelabs_ios_client_appTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = wavelabs_ios_client_appTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B021D5961C8590C7008CF0D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B021D5971C8590C7008CF0D5 /* wavelabs_ios_client_appTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wavelabs_ios_client_appTests.swift; sourceTree = "<group>"; };
-		B09D4D1B1C8597E500D41FFC /* Communicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Communicator.swift; sourceTree = "<group>"; };
-		B09D4D1C1C8597E500D41FFC /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
-		B09D4D201C85981100D41FFC /* MediaApiModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaApiModel.swift; sourceTree = "<group>"; };
-		B09D4D211C85981100D41FFC /* MediaFileDetailsApiModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaFileDetailsApiModel.swift; sourceTree = "<group>"; };
-		B09D4D221C85981100D41FFC /* MemberApiModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemberApiModel.swift; sourceTree = "<group>"; };
-		B09D4D231C85981100D41FFC /* MessagesApiModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagesApiModel.swift; sourceTree = "<group>"; };
-		B09D4D241C85981100D41FFC /* NewMemberApiModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewMemberApiModel.swift; sourceTree = "<group>"; };
-		B09D4D251C85981100D41FFC /* SocialApiModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialApiModel.swift; sourceTree = "<group>"; };
-		B09D4D261C85981100D41FFC /* TokenApiModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokenApiModel.swift; sourceTree = "<group>"; };
-		B09D4D271C85981100D41FFC /* ValidationMessagesApiModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidationMessagesApiModel.swift; sourceTree = "<group>"; };
-		B09D4D311C85982700D41FFC /* AuthAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthAPI.swift; sourceTree = "<group>"; };
-		B09D4D321C85982700D41FFC /* UsersApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersApi.swift; sourceTree = "<group>"; };
-		B09D4D331C85982700D41FFC /* MediaApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaApi.swift; sourceTree = "<group>"; };
-		B09D4D341C85982700D41FFC /* SocialApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialApi.swift; sourceTree = "<group>"; };
 		EB34D46CD30F1FFCC60522DA /* Pods_wavelabs_ios_client_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_wavelabs_ios_client_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -124,9 +96,6 @@
 			isa = PBXGroup;
 			children = (
 				B021D58A1C8590C7008CF0D5 /* wavelabs_ios_client_app.h */,
-				B09D4D391C85982A00D41FFC /* API */,
-				B09D4D301C85981500D41FFC /* Models */,
-				B09D4D1F1C8597F100D41FFC /* Helpers */,
 				B021D5881C8590C7008CF0D5 /* Supporting Files */,
 			);
 			path = wavelabs_ios_client_app;
@@ -155,41 +124,6 @@
 				B021D5961C8590C7008CF0D5 /* Info.plist */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		B09D4D1F1C8597F100D41FFC /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-				B09D4D1B1C8597E500D41FFC /* Communicator.swift */,
-				B09D4D1C1C8597E500D41FFC /* Utilities.swift */,
-			);
-			name = Helpers;
-			sourceTree = "<group>";
-		};
-		B09D4D301C85981500D41FFC /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				B09D4D201C85981100D41FFC /* MediaApiModel.swift */,
-				B09D4D211C85981100D41FFC /* MediaFileDetailsApiModel.swift */,
-				B09D4D221C85981100D41FFC /* MemberApiModel.swift */,
-				B09D4D231C85981100D41FFC /* MessagesApiModel.swift */,
-				B09D4D241C85981100D41FFC /* NewMemberApiModel.swift */,
-				B09D4D251C85981100D41FFC /* SocialApiModel.swift */,
-				B09D4D261C85981100D41FFC /* TokenApiModel.swift */,
-				B09D4D271C85981100D41FFC /* ValidationMessagesApiModel.swift */,
-			);
-			name = Models;
-			sourceTree = "<group>";
-		};
-		B09D4D391C85982A00D41FFC /* API */ = {
-			isa = PBXGroup;
-			children = (
-				B09D4D311C85982700D41FFC /* AuthAPI.swift */,
-				B09D4D321C85982700D41FFC /* UsersApi.swift */,
-				B09D4D331C85982700D41FFC /* MediaApi.swift */,
-				B09D4D341C85982700D41FFC /* SocialApi.swift */,
-			);
-			name = API;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -334,20 +268,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B09D4D2F1C85981100D41FFC /* ValidationMessagesApiModel.swift in Sources */,
-				B09D4D361C85982700D41FFC /* UsersApi.swift in Sources */,
-				B09D4D1D1C8597E500D41FFC /* Communicator.swift in Sources */,
-				B09D4D351C85982700D41FFC /* AuthAPI.swift in Sources */,
-				B09D4D281C85981100D41FFC /* MediaApiModel.swift in Sources */,
-				B09D4D2B1C85981100D41FFC /* MessagesApiModel.swift in Sources */,
-				B09D4D291C85981100D41FFC /* MediaFileDetailsApiModel.swift in Sources */,
-				B09D4D2E1C85981100D41FFC /* TokenApiModel.swift in Sources */,
-				B09D4D2C1C85981100D41FFC /* NewMemberApiModel.swift in Sources */,
-				B09D4D381C85982700D41FFC /* SocialApi.swift in Sources */,
-				B09D4D2D1C85981100D41FFC /* SocialApiModel.swift in Sources */,
-				B09D4D2A1C85981100D41FFC /* MemberApiModel.swift in Sources */,
-				B09D4D371C85982700D41FFC /* MediaApi.swift in Sources */,
-				B09D4D1E1C8597E500D41FFC /* Utilities.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
