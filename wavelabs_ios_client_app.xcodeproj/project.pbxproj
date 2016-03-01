@@ -12,7 +12,6 @@
 		B021D5911C8590C7008CF0D5 /* wavelabs_ios_client_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B021D5851C8590C7008CF0D5 /* wavelabs_ios_client_app.framework */; };
 		B021D5981C8590C7008CF0D5 /* wavelabs_ios_client_appTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B021D5971C8590C7008CF0D5 /* wavelabs_ios_client_appTests.swift */; };
 		B021D5A61C8591DA008CF0D5 /* Models in Resources */ = {isa = PBXBuildFile; fileRef = B021D5A51C8591DA008CF0D5 /* Models */; };
-		B021D5A81C8591FE008CF0D5 /* Helpers in Resources */ = {isa = PBXBuildFile; fileRef = B021D5A71C8591FE008CF0D5 /* Helpers */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +34,6 @@
 		B021D5961C8590C7008CF0D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B021D5971C8590C7008CF0D5 /* wavelabs_ios_client_appTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wavelabs_ios_client_appTests.swift; sourceTree = "<group>"; };
 		B021D5A51C8591DA008CF0D5 /* Models */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Models; sourceTree = "<group>"; };
-		B021D5A71C8591FE008CF0D5 /* Helpers */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Helpers; sourceTree = "<group>"; };
 		EB34D46CD30F1FFCC60522DA /* Pods_wavelabs_ios_client_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_wavelabs_ios_client_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -100,7 +98,6 @@
 			isa = PBXGroup;
 			children = (
 				B021D58A1C8590C7008CF0D5 /* wavelabs_ios_client_app.h */,
-				B021D5A71C8591FE008CF0D5 /* Helpers */,
 				B021D5A51C8591DA008CF0D5 /* Models */,
 				B021D5881C8590C7008CF0D5 /* Supporting Files */,
 			);
@@ -224,7 +221,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B021D5A81C8591FE008CF0D5 /* Helpers in Resources */,
 				B021D5A61C8591DA008CF0D5 /* Models in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
