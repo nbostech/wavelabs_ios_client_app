@@ -43,5 +43,5 @@ s.dependency 'MBProgressHUD', '~> 0.9.0'
 s.source_files = "wavelabs_ios_client_app/**/*.{swift}"
 
 # 9
-s.resources = "wavelabs_ios_client_app/**/*.{png,jpeg,jpg,storyboard,xib}"
+#s.resources = "wavelabs_ios_client_app/**/*.{png,jpeg,jpg,storyboard,xib}"
 end
