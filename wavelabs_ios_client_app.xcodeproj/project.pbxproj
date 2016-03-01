@@ -1,0 +1,489 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		11A75ECC830A0EB79FE913B5 /* Pods_wavelabs_ios_client_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB34D46CD30F1FFCC60522DA /* Pods_wavelabs_ios_client_app.framework */; };
+		B021D58B1C8590C7008CF0D5 /* wavelabs_ios_client_app.h in Headers */ = {isa = PBXBuildFile; fileRef = B021D58A1C8590C7008CF0D5 /* wavelabs_ios_client_app.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B021D5911C8590C7008CF0D5 /* wavelabs_ios_client_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B021D5851C8590C7008CF0D5 /* wavelabs_ios_client_app.framework */; };
+		B021D5981C8590C7008CF0D5 /* wavelabs_ios_client_appTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B021D5971C8590C7008CF0D5 /* wavelabs_ios_client_appTests.swift */; };
+		B021D5A21C859197008CF0D5 /* AuthAPI in Resources */ = {isa = PBXBuildFile; fileRef = B021D5A11C859197008CF0D5 /* AuthAPI */; };
+		B021D5A61C8591DA008CF0D5 /* Models in Resources */ = {isa = PBXBuildFile; fileRef = B021D5A51C8591DA008CF0D5 /* Models */; };
+		B021D5A81C8591FE008CF0D5 /* Helpers in Resources */ = {isa = PBXBuildFile; fileRef = B021D5A71C8591FE008CF0D5 /* Helpers */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B021D5921C8590C7008CF0D5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B021D57C1C8590C7008CF0D5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B021D5841C8590C7008CF0D5;
+			remoteInfo = wavelabs_ios_client_app;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		541EEC4A9D1D664F2EB5268E /* Pods-wavelabs_ios_client_app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wavelabs_ios_client_app.debug.xcconfig"; path = "Pods/Target Support Files/Pods-wavelabs_ios_client_app/Pods-wavelabs_ios_client_app.debug.xcconfig"; sourceTree = "<group>"; };
+		6355E62698560186F73C914C /* Pods-wavelabs_ios_client_app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wavelabs_ios_client_app.release.xcconfig"; path = "Pods/Target Support Files/Pods-wavelabs_ios_client_app/Pods-wavelabs_ios_client_app.release.xcconfig"; sourceTree = "<group>"; };
+		B021D5851C8590C7008CF0D5 /* wavelabs_ios_client_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = wavelabs_ios_client_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B021D5891C8590C7008CF0D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B021D58A1C8590C7008CF0D5 /* wavelabs_ios_client_app.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = wavelabs_ios_client_app.h; sourceTree = "<group>"; };
+		B021D5901C8590C7008CF0D5 /* wavelabs_ios_client_appTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = wavelabs_ios_client_appTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B021D5961C8590C7008CF0D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B021D5971C8590C7008CF0D5 /* wavelabs_ios_client_appTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wavelabs_ios_client_appTests.swift; sourceTree = "<group>"; };
+		B021D5A11C859197008CF0D5 /* AuthAPI */ = {isa = PBXFileReference; lastKnownFileType = folder; path = AuthAPI; sourceTree = "<group>"; };
+		B021D5A51C8591DA008CF0D5 /* Models */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Models; sourceTree = "<group>"; };
+		B021D5A71C8591FE008CF0D5 /* Helpers */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Helpers; sourceTree = "<group>"; };
+		EB34D46CD30F1FFCC60522DA /* Pods_wavelabs_ios_client_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_wavelabs_ios_client_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B021D5811C8590C7008CF0D5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				11A75ECC830A0EB79FE913B5 /* Pods_wavelabs_ios_client_app.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B021D58D1C8590C7008CF0D5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B021D5911C8590C7008CF0D5 /* wavelabs_ios_client_app.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2F8F9739B8640A8A8DD01564 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				541EEC4A9D1D664F2EB5268E /* Pods-wavelabs_ios_client_app.debug.xcconfig */,
+				6355E62698560186F73C914C /* Pods-wavelabs_ios_client_app.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		5B3F98CAB64CD5B78DA3C6D5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EB34D46CD30F1FFCC60522DA /* Pods_wavelabs_ios_client_app.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B021D57B1C8590C7008CF0D5 = {
+			isa = PBXGroup;
+			children = (
+				B021D5871C8590C7008CF0D5 /* wavelabs_ios_client_app */,
+				B021D5941C8590C7008CF0D5 /* wavelabs_ios_client_appTests */,
+				B021D5861C8590C7008CF0D5 /* Products */,
+				2F8F9739B8640A8A8DD01564 /* Pods */,
+				5B3F98CAB64CD5B78DA3C6D5 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		B021D5861C8590C7008CF0D5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B021D5851C8590C7008CF0D5 /* wavelabs_ios_client_app.framework */,
+				B021D5901C8590C7008CF0D5 /* wavelabs_ios_client_appTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B021D5871C8590C7008CF0D5 /* wavelabs_ios_client_app */ = {
+			isa = PBXGroup;
+			children = (
+				B021D58A1C8590C7008CF0D5 /* wavelabs_ios_client_app.h */,
+				B021D5A71C8591FE008CF0D5 /* Helpers */,
+				B021D5A51C8591DA008CF0D5 /* Models */,
+				B021D5A11C859197008CF0D5 /* AuthAPI */,
+				B021D5881C8590C7008CF0D5 /* Supporting Files */,
+			);
+			path = wavelabs_ios_client_app;
+			sourceTree = "<group>";
+		};
+		B021D5881C8590C7008CF0D5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B021D5891C8590C7008CF0D5 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B021D5941C8590C7008CF0D5 /* wavelabs_ios_client_appTests */ = {
+			isa = PBXGroup;
+			children = (
+				B021D5971C8590C7008CF0D5 /* wavelabs_ios_client_appTests.swift */,
+				B021D5951C8590C7008CF0D5 /* Supporting Files */,
+			);
+			path = wavelabs_ios_client_appTests;
+			sourceTree = "<group>";
+		};
+		B021D5951C8590C7008CF0D5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B021D5961C8590C7008CF0D5 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		B021D5821C8590C7008CF0D5 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B021D58B1C8590C7008CF0D5 /* wavelabs_ios_client_app.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		B021D5841C8590C7008CF0D5 /* wavelabs_ios_client_app */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B021D59B1C8590C7008CF0D5 /* Build configuration list for PBXNativeTarget "wavelabs_ios_client_app" */;
+			buildPhases = (
+				AD3271B71D71275B332FE986 /* Check Pods Manifest.lock */,
+				B021D5801C8590C7008CF0D5 /* Sources */,
+				B021D5811C8590C7008CF0D5 /* Frameworks */,
+				B021D5821C8590C7008CF0D5 /* Headers */,
+				B021D5831C8590C7008CF0D5 /* Resources */,
+				669CFA79E6DAB4E691EF52FF /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = wavelabs_ios_client_app;
+			productName = wavelabs_ios_client_app;
+			productReference = B021D5851C8590C7008CF0D5 /* wavelabs_ios_client_app.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		B021D58F1C8590C7008CF0D5 /* wavelabs_ios_client_appTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B021D59E1C8590C7008CF0D5 /* Build configuration list for PBXNativeTarget "wavelabs_ios_client_appTests" */;
+			buildPhases = (
+				B021D58C1C8590C7008CF0D5 /* Sources */,
+				B021D58D1C8590C7008CF0D5 /* Frameworks */,
+				B021D58E1C8590C7008CF0D5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B021D5931C8590C7008CF0D5 /* PBXTargetDependency */,
+			);
+			name = wavelabs_ios_client_appTests;
+			productName = wavelabs_ios_client_appTests;
+			productReference = B021D5901C8590C7008CF0D5 /* wavelabs_ios_client_appTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B021D57C1C8590C7008CF0D5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = Wavelabs;
+				TargetAttributes = {
+					B021D5841C8590C7008CF0D5 = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					B021D58F1C8590C7008CF0D5 = {
+						CreatedOnToolsVersion = 6.4;
+					};
+				};
+			};
+			buildConfigurationList = B021D57F1C8590C7008CF0D5 /* Build configuration list for PBXProject "wavelabs_ios_client_app" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = B021D57B1C8590C7008CF0D5;
+			productRefGroup = B021D5861C8590C7008CF0D5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B021D5841C8590C7008CF0D5 /* wavelabs_ios_client_app */,
+				B021D58F1C8590C7008CF0D5 /* wavelabs_ios_client_appTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B021D5831C8590C7008CF0D5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B021D5A81C8591FE008CF0D5 /* Helpers in Resources */,
+				B021D5A61C8591DA008CF0D5 /* Models in Resources */,
+				B021D5A21C859197008CF0D5 /* AuthAPI in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B021D58E1C8590C7008CF0D5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		669CFA79E6DAB4E691EF52FF /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-wavelabs_ios_client_app/Pods-wavelabs_ios_client_app-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AD3271B71D71275B332FE986 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B021D5801C8590C7008CF0D5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B021D58C1C8590C7008CF0D5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B021D5981C8590C7008CF0D5 /* wavelabs_ios_client_appTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B021D5931C8590C7008CF0D5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B021D5841C8590C7008CF0D5 /* wavelabs_ios_client_app */;
+			targetProxy = B021D5921C8590C7008CF0D5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		B021D5991C8590C7008CF0D5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B021D59A1C8590C7008CF0D5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		B021D59C1C8590C7008CF0D5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 541EEC4A9D1D664F2EB5268E /* Pods-wavelabs_ios_client_app.debug.xcconfig */;
+			buildSettings = {
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = wavelabs_ios_client_app/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		B021D59D1C8590C7008CF0D5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6355E62698560186F73C914C /* Pods-wavelabs_ios_client_app.release.xcconfig */;
+			buildSettings = {
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = wavelabs_ios_client_app/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		B021D59F1C8590C7008CF0D5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = wavelabs_ios_client_appTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		B021D5A01C8590C7008CF0D5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = wavelabs_ios_client_appTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B021D57F1C8590C7008CF0D5 /* Build configuration list for PBXProject "wavelabs_ios_client_app" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B021D5991C8590C7008CF0D5 /* Debug */,
+				B021D59A1C8590C7008CF0D5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B021D59B1C8590C7008CF0D5 /* Build configuration list for PBXNativeTarget "wavelabs_ios_client_app" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B021D59C1C8590C7008CF0D5 /* Debug */,
+				B021D59D1C8590C7008CF0D5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B021D59E1C8590C7008CF0D5 /* Build configuration list for PBXNativeTarget "wavelabs_ios_client_appTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B021D59F1C8590C7008CF0D5 /* Debug */,
+				B021D5A01C8590C7008CF0D5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B021D57C1C8590C7008CF0D5 /* Project object */;
+}

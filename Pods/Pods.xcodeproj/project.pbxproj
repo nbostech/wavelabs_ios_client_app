@@ -1,0 +1,703 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		01AA2B4718C4B386F8141DBF35D98653 /* Pods-wavelabs_ios_client_app-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B7130806AB1AD911E9E4B3E4A258B9E /* Pods-wavelabs_ios_client_app-dummy.m */; };
+		04C823F01D1B0829750DA2A819A96597 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E093D627869B650AB8D6411D2DE6B7A /* Foundation.framework */; };
+		075550170E9428B3300E731075481C27 /* Alamofire-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6D148856C9F7DC012FE50288FA5F4041 /* Alamofire-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0DE156B3A830FADE837206D1B74756D7 /* Alamofire-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4BAD309FD03D138E8B669DD2ECC8A0 /* Alamofire-dummy.m */; };
+		0F6FCF15CC1F4F05C46539443FDA2AAB /* MBProgressHUD-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 57CC27E83C2865DD6F1EFD68D4B3729F /* MBProgressHUD-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		13C25BE41B7C070DEF4F64FBF29370B2 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D46E15BE3EFA778360378C61B69A3D3 /* Request.swift */; };
+		18CBF763A79D3A95320B6359940A4C22 /* Pods-wavelabs_ios_client_app-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E00F1C57850C195FAA6184A3237CB1AA /* Pods-wavelabs_ios_client_app-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1E7623B9420C3E71FAE3287C0CECA040 /* MBProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = C4E6C50F227468CF55E235E996696AD9 /* MBProgressHUD.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3A7A9687B047B5096DE98408373BDE0D /* MultipartFormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F8C85A58139DD41ADCB49393F31E748 /* MultipartFormData.swift */; };
+		40C42F3F5DD94F29414FB7BF431221AC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1264325C4220C1BDC3C73E5D496129FD /* CoreGraphics.framework */; };
+		5038772EC63D75F8562E341F7E3EAFE7 /* Upload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B1394CF2A1794211A8329BC243444AD /* Upload.swift */; };
+		55729A97898A03C607E3D51B10F8DBEA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E093D627869B650AB8D6411D2DE6B7A /* Foundation.framework */; };
+		7223F2D78A55A3B6DF2F4C9373E140BC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E093D627869B650AB8D6411D2DE6B7A /* Foundation.framework */; };
+		83195DCB9C054DD321766084463996DC /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5849A8E0D812B8BB1F3609B429C2B9C /* Alamofire.swift */; };
+		89D6FDC8850947C5ACDCBF4E23D3DB01 /* Download.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19658E6D15592D12BD7D8EC499930FA6 /* Download.swift */; };
+		8A655159BF716F0E8DF73F26A6AA4B34 /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83155636E1DBD3986740AD82A67838AD /* Manager.swift */; };
+		9C7CA0216E2700A6CB1D07815DD3B0F6 /* ResponseSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B845DB4DC3E58E0C82B1688E78C1960 /* ResponseSerialization.swift */; };
+		9E17CC11959A1FE5566CE528047ACDC0 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 25740001E0A1A604398A2497546417F0 /* MBProgressHUD.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		B570FB491666B6D7AB7A8763B55F9337 /* ServerTrustPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6FBC7FB229DB5D7A380C3214DA49F1 /* ServerTrustPolicy.swift */; };
+		BB010EE04BA829E196554A00A951AA7C /* MBProgressHUD-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5914DA1A12001F71842385B0F772209F /* MBProgressHUD-dummy.m */; };
+		BB5563BE0A1C95CCA1EDB9D343B5A594 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED5C59D6F54F52083F9155B4260F903 /* Validation.swift */; };
+		ED9992465FD4BE22AF741E03F2F1D111 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8C4C2E645962A1483DC7DA1F8BC937 /* ParameterEncoding.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4B21BF6796642820EBAD12BB1FC78B15 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E61CE3B6DFA1FE6B3E296965C76C0E10;
+			remoteInfo = MBProgressHUD;
+		};
+		A416223FF743EA1272E9199DFCC4D91F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 265AD71FE3DCFCE85B82FCA721DCE799;
+			remoteInfo = Alamofire;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1264325C4220C1BDC3C73E5D496129FD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
+		19658E6D15592D12BD7D8EC499930FA6 /* Download.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Download.swift; path = Source/Download.swift; sourceTree = "<group>"; };
+		25740001E0A1A604398A2497546417F0 /* MBProgressHUD.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		296FC83FA97DCB76DE525980506BD6B2 /* MBProgressHUD.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = MBProgressHUD.modulemap; sourceTree = "<group>"; };
+		2B7130806AB1AD911E9E4B3E4A258B9E /* Pods-wavelabs_ios_client_app-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-wavelabs_ios_client_app-dummy.m"; sourceTree = "<group>"; };
+		2D6FBC7FB229DB5D7A380C3214DA49F1 /* ServerTrustPolicy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ServerTrustPolicy.swift; path = Source/ServerTrustPolicy.swift; sourceTree = "<group>"; };
+		2F8C85A58139DD41ADCB49393F31E748 /* MultipartFormData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultipartFormData.swift; path = Source/MultipartFormData.swift; sourceTree = "<group>"; };
+		332CF6077774720827F6147706215CCD /* MBProgressHUD-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD-prefix.pch"; sourceTree = "<group>"; };
+		48D301F2ED11588665B69F61B5EF7BBA /* MBProgressHUD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MBProgressHUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C4FEE5AE5184B3C3EC2164268A2E4A0 /* Pods_wavelabs_ios_client_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_wavelabs_ios_client_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		57CC27E83C2865DD6F1EFD68D4B3729F /* MBProgressHUD-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD-umbrella.h"; sourceTree = "<group>"; };
+		57D9A0DE462B1D801545579A7E6DFD7B /* Pods-wavelabs_ios_client_app.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-wavelabs_ios_client_app.modulemap"; sourceTree = "<group>"; };
+		5914DA1A12001F71842385B0F772209F /* MBProgressHUD-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD-dummy.m"; sourceTree = "<group>"; };
+		5D46E15BE3EFA778360378C61B69A3D3 /* Request.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Request.swift; path = Source/Request.swift; sourceTree = "<group>"; };
+		5D4BAD309FD03D138E8B669DD2ECC8A0 /* Alamofire-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Alamofire-dummy.m"; sourceTree = "<group>"; };
+		64A416BDEDC3BE15C3E6AF5F6AD18FEF /* Pods-wavelabs_ios_client_app-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-wavelabs_ios_client_app-resources.sh"; sourceTree = "<group>"; };
+		6B1394CF2A1794211A8329BC243444AD /* Upload.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Upload.swift; path = Source/Upload.swift; sourceTree = "<group>"; };
+		6C0F2D2BACD294EC71F153A8BF5951D1 /* Alamofire.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Alamofire.modulemap; sourceTree = "<group>"; };
+		6D148856C9F7DC012FE50288FA5F4041 /* Alamofire-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-umbrella.h"; sourceTree = "<group>"; };
+		6E093D627869B650AB8D6411D2DE6B7A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		72D0C294D7565D5C4308774D852912F0 /* Pods-wavelabs_ios_client_app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-wavelabs_ios_client_app.release.xcconfig"; sourceTree = "<group>"; };
+		744E30396D377CB81BCD4301928B0833 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7B845DB4DC3E58E0C82B1688E78C1960 /* ResponseSerialization.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResponseSerialization.swift; path = Source/ResponseSerialization.swift; sourceTree = "<group>"; };
+		7ED5C59D6F54F52083F9155B4260F903 /* Validation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Validation.swift; path = Source/Validation.swift; sourceTree = "<group>"; };
+		7F8C4C2E645962A1483DC7DA1F8BC937 /* ParameterEncoding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParameterEncoding.swift; path = Source/ParameterEncoding.swift; sourceTree = "<group>"; };
+		83155636E1DBD3986740AD82A67838AD /* Manager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Manager.swift; path = Source/Manager.swift; sourceTree = "<group>"; };
+		987909BDDD6942801CBBC6DEEB5A0AE7 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9E6C27611C9F016EAC5BE888082A7583 /* Pods-wavelabs_ios_client_app-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-wavelabs_ios_client_app-acknowledgements.markdown"; sourceTree = "<group>"; };
+		A885C4C4AA6C346CFAF78E5E9827F117 /* Alamofire-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-prefix.pch"; sourceTree = "<group>"; };
+		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		C005AB922081EC00B416CA2FAFC70287 /* MBProgressHUD.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MBProgressHUD.xcconfig; sourceTree = "<group>"; };
+		C1B7E1B710560130BF42989E453F15D5 /* Pods-wavelabs_ios_client_app-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-wavelabs_ios_client_app-frameworks.sh"; sourceTree = "<group>"; };
+		C1E6B074941FF7D9D1904EA15B081762 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C4E6C50F227468CF55E235E996696AD9 /* MBProgressHUD.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		CEFBAE5139CC9166B278BD23BC9DBF5C /* Pods-wavelabs_ios_client_app-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-wavelabs_ios_client_app-acknowledgements.plist"; sourceTree = "<group>"; };
+		D5849A8E0D812B8BB1F3609B429C2B9C /* Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Alamofire.swift; path = Source/Alamofire.swift; sourceTree = "<group>"; };
+		DAFB38D400CA7D451FBA10A07682F0C0 /* Alamofire.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Alamofire.xcconfig; sourceTree = "<group>"; };
+		E00F1C57850C195FAA6184A3237CB1AA /* Pods-wavelabs_ios_client_app-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-wavelabs_ios_client_app-umbrella.h"; sourceTree = "<group>"; };
+		E17175373D63B2649B58C7AFFF2BE112 /* Pods-wavelabs_ios_client_app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-wavelabs_ios_client_app.debug.xcconfig"; sourceTree = "<group>"; };
+		F3E3EB97317F17B08FDAFCE772D54D3E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		39ABA8A282291AF9150060BBAB5730F9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04C823F01D1B0829750DA2A819A96597 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6488DB2C9BB99C53077D390CE673DD56 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				40C42F3F5DD94F29414FB7BF431221AC /* CoreGraphics.framework in Frameworks */,
+				7223F2D78A55A3B6DF2F4C9373E140BC /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B131CD521A4079342556BE75A40A3C51 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55729A97898A03C607E3D51B10F8DBEA /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		36C06A02A00144C64CD7282BA31846BD /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				1264325C4220C1BDC3C73E5D496129FD /* CoreGraphics.framework */,
+				6E093D627869B650AB8D6411D2DE6B7A /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		3CEB4EE4212206975B5AAA1E434F52E9 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				744E30396D377CB81BCD4301928B0833 /* Info.plist */,
+				296FC83FA97DCB76DE525980506BD6B2 /* MBProgressHUD.modulemap */,
+				C005AB922081EC00B416CA2FAFC70287 /* MBProgressHUD.xcconfig */,
+				5914DA1A12001F71842385B0F772209F /* MBProgressHUD-dummy.m */,
+				332CF6077774720827F6147706215CCD /* MBProgressHUD-prefix.pch */,
+				57CC27E83C2865DD6F1EFD68D4B3729F /* MBProgressHUD-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/MBProgressHUD";
+			sourceTree = "<group>";
+		};
+		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				36C06A02A00144C64CD7282BA31846BD /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		535241AD0CF9DBEBFFD727288DB8F16C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				987909BDDD6942801CBBC6DEEB5A0AE7 /* Alamofire.framework */,
+				48D301F2ED11588665B69F61B5EF7BBA /* MBProgressHUD.framework */,
+				4C4FEE5AE5184B3C3EC2164268A2E4A0 /* Pods_wavelabs_ios_client_app.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		775B5FA99EA9D25C6643DDF910C6911B /* Pods-wavelabs_ios_client_app */ = {
+			isa = PBXGroup;
+			children = (
+				C1E6B074941FF7D9D1904EA15B081762 /* Info.plist */,
+				57D9A0DE462B1D801545579A7E6DFD7B /* Pods-wavelabs_ios_client_app.modulemap */,
+				9E6C27611C9F016EAC5BE888082A7583 /* Pods-wavelabs_ios_client_app-acknowledgements.markdown */,
+				CEFBAE5139CC9166B278BD23BC9DBF5C /* Pods-wavelabs_ios_client_app-acknowledgements.plist */,
+				2B7130806AB1AD911E9E4B3E4A258B9E /* Pods-wavelabs_ios_client_app-dummy.m */,
+				C1B7E1B710560130BF42989E453F15D5 /* Pods-wavelabs_ios_client_app-frameworks.sh */,
+				64A416BDEDC3BE15C3E6AF5F6AD18FEF /* Pods-wavelabs_ios_client_app-resources.sh */,
+				E00F1C57850C195FAA6184A3237CB1AA /* Pods-wavelabs_ios_client_app-umbrella.h */,
+				E17175373D63B2649B58C7AFFF2BE112 /* Pods-wavelabs_ios_client_app.debug.xcconfig */,
+				72D0C294D7565D5C4308774D852912F0 /* Pods-wavelabs_ios_client_app.release.xcconfig */,
+			);
+			name = "Pods-wavelabs_ios_client_app";
+			path = "Target Support Files/Pods-wavelabs_ios_client_app";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
+				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
+				838F86193D836CE3BE7B98D54B4FD87C /* Pods */,
+				535241AD0CF9DBEBFFD727288DB8F16C /* Products */,
+				9122E907A1EFE2DAC5170CFEC5249768 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		838F86193D836CE3BE7B98D54B4FD87C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				888B6991459697DD1EE9CEB886DD71C7 /* Alamofire */,
+				EE94F37BC70A4ED32DD8D6975ED4961B /* MBProgressHUD */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		888B6991459697DD1EE9CEB886DD71C7 /* Alamofire */ = {
+			isa = PBXGroup;
+			children = (
+				D5849A8E0D812B8BB1F3609B429C2B9C /* Alamofire.swift */,
+				19658E6D15592D12BD7D8EC499930FA6 /* Download.swift */,
+				83155636E1DBD3986740AD82A67838AD /* Manager.swift */,
+				2F8C85A58139DD41ADCB49393F31E748 /* MultipartFormData.swift */,
+				7F8C4C2E645962A1483DC7DA1F8BC937 /* ParameterEncoding.swift */,
+				5D46E15BE3EFA778360378C61B69A3D3 /* Request.swift */,
+				7B845DB4DC3E58E0C82B1688E78C1960 /* ResponseSerialization.swift */,
+				2D6FBC7FB229DB5D7A380C3214DA49F1 /* ServerTrustPolicy.swift */,
+				6B1394CF2A1794211A8329BC243444AD /* Upload.swift */,
+				7ED5C59D6F54F52083F9155B4260F903 /* Validation.swift */,
+				9F2802E1AA61EC2374C4DBA773DE809C /* Support Files */,
+			);
+			path = Alamofire;
+			sourceTree = "<group>";
+		};
+		9122E907A1EFE2DAC5170CFEC5249768 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				775B5FA99EA9D25C6643DDF910C6911B /* Pods-wavelabs_ios_client_app */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		9F2802E1AA61EC2374C4DBA773DE809C /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				6C0F2D2BACD294EC71F153A8BF5951D1 /* Alamofire.modulemap */,
+				DAFB38D400CA7D451FBA10A07682F0C0 /* Alamofire.xcconfig */,
+				5D4BAD309FD03D138E8B669DD2ECC8A0 /* Alamofire-dummy.m */,
+				A885C4C4AA6C346CFAF78E5E9827F117 /* Alamofire-prefix.pch */,
+				6D148856C9F7DC012FE50288FA5F4041 /* Alamofire-umbrella.h */,
+				F3E3EB97317F17B08FDAFCE772D54D3E /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Alamofire";
+			sourceTree = "<group>";
+		};
+		EE94F37BC70A4ED32DD8D6975ED4961B /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				C4E6C50F227468CF55E235E996696AD9 /* MBProgressHUD.h */,
+				25740001E0A1A604398A2497546417F0 /* MBProgressHUD.m */,
+				3CEB4EE4212206975B5AAA1E434F52E9 /* Support Files */,
+			);
+			path = MBProgressHUD;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		0B3B7DB73DB8C27285CC0CC159449069 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				075550170E9428B3300E731075481C27 /* Alamofire-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9ECCB5570B7FBF8D348655FFA0FE9C90 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0F6FCF15CC1F4F05C46539443FDA2AAB /* MBProgressHUD-umbrella.h in Headers */,
+				1E7623B9420C3E71FAE3287C0CECA040 /* MBProgressHUD.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF46901F285C2FF0303C0E3394C399B3 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18CBF763A79D3A95320B6359940A4C22 /* Pods-wavelabs_ios_client_app-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		265AD71FE3DCFCE85B82FCA721DCE799 /* Alamofire */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FDA661F61C186E66DBB69EC155919A11 /* Build configuration list for PBXNativeTarget "Alamofire" */;
+			buildPhases = (
+				8B0A2452852C57BBC8C3E6D10E24DDC4 /* Sources */,
+				B131CD521A4079342556BE75A40A3C51 /* Frameworks */,
+				0B3B7DB73DB8C27285CC0CC159449069 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Alamofire;
+			productName = Alamofire;
+			productReference = 987909BDDD6942801CBBC6DEEB5A0AE7 /* Alamofire.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		74ACCFCBB494D7C81F3C942F814916E5 /* Pods-wavelabs_ios_client_app */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 27B9710F68E780AFE919EBA2470E26A6 /* Build configuration list for PBXNativeTarget "Pods-wavelabs_ios_client_app" */;
+			buildPhases = (
+				83AAB5B05D2292452FD8EB507F29292F /* Sources */,
+				39ABA8A282291AF9150060BBAB5730F9 /* Frameworks */,
+				EF46901F285C2FF0303C0E3394C399B3 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D30A917BCAD5D3F9D2D38B9875FEB38A /* PBXTargetDependency */,
+				7E8CAD2FE630F2206854127BC6DB5543 /* PBXTargetDependency */,
+			);
+			name = "Pods-wavelabs_ios_client_app";
+			productName = "Pods-wavelabs_ios_client_app";
+			productReference = 4C4FEE5AE5184B3C3EC2164268A2E4A0 /* Pods_wavelabs_ios_client_app.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		E61CE3B6DFA1FE6B3E296965C76C0E10 /* MBProgressHUD */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0ECAD3CE95CA19E5AFE91894C857527C /* Build configuration list for PBXNativeTarget "MBProgressHUD" */;
+			buildPhases = (
+				2DAFB06DF9D4B76E7F94DA2B8A63DD59 /* Sources */,
+				6488DB2C9BB99C53077D390CE673DD56 /* Frameworks */,
+				9ECCB5570B7FBF8D348655FFA0FE9C90 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MBProgressHUD;
+			productName = MBProgressHUD;
+			productReference = 48D301F2ED11588665B69F61B5EF7BBA /* MBProgressHUD.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 535241AD0CF9DBEBFFD727288DB8F16C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				265AD71FE3DCFCE85B82FCA721DCE799 /* Alamofire */,
+				E61CE3B6DFA1FE6B3E296965C76C0E10 /* MBProgressHUD */,
+				74ACCFCBB494D7C81F3C942F814916E5 /* Pods-wavelabs_ios_client_app */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2DAFB06DF9D4B76E7F94DA2B8A63DD59 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB010EE04BA829E196554A00A951AA7C /* MBProgressHUD-dummy.m in Sources */,
+				9E17CC11959A1FE5566CE528047ACDC0 /* MBProgressHUD.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		83AAB5B05D2292452FD8EB507F29292F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				01AA2B4718C4B386F8141DBF35D98653 /* Pods-wavelabs_ios_client_app-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8B0A2452852C57BBC8C3E6D10E24DDC4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0DE156B3A830FADE837206D1B74756D7 /* Alamofire-dummy.m in Sources */,
+				83195DCB9C054DD321766084463996DC /* Alamofire.swift in Sources */,
+				89D6FDC8850947C5ACDCBF4E23D3DB01 /* Download.swift in Sources */,
+				8A655159BF716F0E8DF73F26A6AA4B34 /* Manager.swift in Sources */,
+				3A7A9687B047B5096DE98408373BDE0D /* MultipartFormData.swift in Sources */,
+				ED9992465FD4BE22AF741E03F2F1D111 /* ParameterEncoding.swift in Sources */,
+				13C25BE41B7C070DEF4F64FBF29370B2 /* Request.swift in Sources */,
+				9C7CA0216E2700A6CB1D07815DD3B0F6 /* ResponseSerialization.swift in Sources */,
+				B570FB491666B6D7AB7A8763B55F9337 /* ServerTrustPolicy.swift in Sources */,
+				5038772EC63D75F8562E341F7E3EAFE7 /* Upload.swift in Sources */,
+				BB5563BE0A1C95CCA1EDB9D343B5A594 /* Validation.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7E8CAD2FE630F2206854127BC6DB5543 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MBProgressHUD;
+			target = E61CE3B6DFA1FE6B3E296965C76C0E10 /* MBProgressHUD */;
+			targetProxy = 4B21BF6796642820EBAD12BB1FC78B15 /* PBXContainerItemProxy */;
+		};
+		D30A917BCAD5D3F9D2D38B9875FEB38A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Alamofire;
+			target = 265AD71FE3DCFCE85B82FCA721DCE799 /* Alamofire */;
+			targetProxy = A416223FF743EA1272E9199DFCC4D91F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		141E9F1626FE34EE75CDC2B7581B19F3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C005AB922081EC00B416CA2FAFC70287 /* MBProgressHUD.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/MBProgressHUD/MBProgressHUD-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/MBProgressHUD/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/MBProgressHUD/MBProgressHUD.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = MBProgressHUD;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		5ADB4F4515C56D678656FC78D4405B84 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 72D0C294D7565D5C4308774D852912F0 /* Pods-wavelabs_ios_client_app.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-wavelabs_ios_client_app/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-wavelabs_ios_client_app/Pods-wavelabs_ios_client_app.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_wavelabs_ios_client_app;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		A70CDAD61F90AC503C7D04CC22DA2923 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		EF9333AF1E81B83A4C56BE7DC73ABC82 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C005AB922081EC00B416CA2FAFC70287 /* MBProgressHUD.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/MBProgressHUD/MBProgressHUD-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/MBProgressHUD/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/MBProgressHUD/MBProgressHUD.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = MBProgressHUD;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		F4C6A980F83DF1A0ABA0869BAF2724E4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DAFB38D400CA7D451FBA10A07682F0C0 /* Alamofire.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Alamofire/Alamofire-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Alamofire/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Alamofire/Alamofire.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = Alamofire;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		FB45FFD90572718D82AB9092B750F0CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FC3A3CF3AF04CEB1449D3231119AD947 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DAFB38D400CA7D451FBA10A07682F0C0 /* Alamofire.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Alamofire/Alamofire-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Alamofire/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Alamofire/Alamofire.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = Alamofire;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		FF4F06761C49ABF69EBF3C4FE0D7ADC4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E17175373D63B2649B58C7AFFF2BE112 /* Pods-wavelabs_ios_client_app.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-wavelabs_ios_client_app/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-wavelabs_ios_client_app/Pods-wavelabs_ios_client_app.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_wavelabs_ios_client_app;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0ECAD3CE95CA19E5AFE91894C857527C /* Build configuration list for PBXNativeTarget "MBProgressHUD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				141E9F1626FE34EE75CDC2B7581B19F3 /* Debug */,
+				EF9333AF1E81B83A4C56BE7DC73ABC82 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		27B9710F68E780AFE919EBA2470E26A6 /* Build configuration list for PBXNativeTarget "Pods-wavelabs_ios_client_app" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FF4F06761C49ABF69EBF3C4FE0D7ADC4 /* Debug */,
+				5ADB4F4515C56D678656FC78D4405B84 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A70CDAD61F90AC503C7D04CC22DA2923 /* Debug */,
+				FB45FFD90572718D82AB9092B750F0CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FDA661F61C186E66DBB69EC155919A11 /* Build configuration list for PBXNativeTarget "Alamofire" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC3A3CF3AF04CEB1449D3231119AD947 /* Debug */,
+				F4C6A980F83DF1A0ABA0869BAF2724E4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
