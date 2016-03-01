@@ -42,7 +42,7 @@ $ pod install
 
 ### Add Url and ClientId
   
-   Add Baseurl and clientId in Targets/info as WavelabsAPISettings
+   Add Baseurl, clientId and client secret in Targets/info as WavelabsAPISettings
 
 ### Making a Request
 
