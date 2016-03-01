@@ -11,8 +11,20 @@
 		B021D58B1C8590C7008CF0D5 /* wavelabs_ios_client_app.h in Headers */ = {isa = PBXBuildFile; fileRef = B021D58A1C8590C7008CF0D5 /* wavelabs_ios_client_app.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B021D5911C8590C7008CF0D5 /* wavelabs_ios_client_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B021D5851C8590C7008CF0D5 /* wavelabs_ios_client_app.framework */; };
 		B021D5981C8590C7008CF0D5 /* wavelabs_ios_client_appTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B021D5971C8590C7008CF0D5 /* wavelabs_ios_client_appTests.swift */; };
-		B021D5A61C8591DA008CF0D5 /* Models in Resources */ = {isa = PBXBuildFile; fileRef = B021D5A51C8591DA008CF0D5 /* Models */; };
-		B021D5A81C8591FE008CF0D5 /* Helpers in Resources */ = {isa = PBXBuildFile; fileRef = B021D5A71C8591FE008CF0D5 /* Helpers */; };
+		B06A9AF71C859B2F000F2A79 /* AuthAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06A9AF31C859B2F000F2A79 /* AuthAPI.swift */; };
+		B06A9AF81C859B2F000F2A79 /* UsersApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06A9AF41C859B2F000F2A79 /* UsersApi.swift */; };
+		B06A9AF91C859B2F000F2A79 /* MediaApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06A9AF51C859B2F000F2A79 /* MediaApi.swift */; };
+		B06A9AFA1C859B2F000F2A79 /* SocialApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06A9AF61C859B2F000F2A79 /* SocialApi.swift */; };
+		B06A9B041C859B5C000F2A79 /* MediaApiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06A9AFC1C859B5C000F2A79 /* MediaApiModel.swift */; };
+		B06A9B051C859B5C000F2A79 /* MediaFileDetailsApiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06A9AFD1C859B5C000F2A79 /* MediaFileDetailsApiModel.swift */; };
+		B06A9B061C859B5C000F2A79 /* MemberApiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06A9AFE1C859B5C000F2A79 /* MemberApiModel.swift */; };
+		B06A9B071C859B5C000F2A79 /* MessagesApiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06A9AFF1C859B5C000F2A79 /* MessagesApiModel.swift */; };
+		B06A9B081C859B5C000F2A79 /* NewMemberApiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06A9B001C859B5C000F2A79 /* NewMemberApiModel.swift */; };
+		B06A9B091C859B5C000F2A79 /* SocialApiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06A9B011C859B5C000F2A79 /* SocialApiModel.swift */; };
+		B06A9B0A1C859B5C000F2A79 /* TokenApiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06A9B021C859B5C000F2A79 /* TokenApiModel.swift */; };
+		B06A9B0B1C859B5C000F2A79 /* ValidationMessagesApiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06A9B031C859B5C000F2A79 /* ValidationMessagesApiModel.swift */; };
+		B06A9B0F1C859B6A000F2A79 /* Communicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06A9B0D1C859B6A000F2A79 /* Communicator.swift */; };
+		B06A9B101C859B6A000F2A79 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06A9B0E1C859B6A000F2A79 /* Utilities.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,8 +46,20 @@
 		B021D5901C8590C7008CF0D5 /* wavelabs_ios_client_appTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = wavelabs_ios_client_appTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B021D5961C8590C7008CF0D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B021D5971C8590C7008CF0D5 /* wavelabs_ios_client_appTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wavelabs_ios_client_appTests.swift; sourceTree = "<group>"; };
-		B021D5A51C8591DA008CF0D5 /* Models */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Models; sourceTree = "<group>"; };
-		B021D5A71C8591FE008CF0D5 /* Helpers */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Helpers; sourceTree = "<group>"; };
+		B06A9AF31C859B2F000F2A79 /* AuthAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthAPI.swift; sourceTree = "<group>"; };
+		B06A9AF41C859B2F000F2A79 /* UsersApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersApi.swift; sourceTree = "<group>"; };
+		B06A9AF51C859B2F000F2A79 /* MediaApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaApi.swift; sourceTree = "<group>"; };
+		B06A9AF61C859B2F000F2A79 /* SocialApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialApi.swift; sourceTree = "<group>"; };
+		B06A9AFC1C859B5C000F2A79 /* MediaApiModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaApiModel.swift; sourceTree = "<group>"; };
+		B06A9AFD1C859B5C000F2A79 /* MediaFileDetailsApiModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaFileDetailsApiModel.swift; sourceTree = "<group>"; };
+		B06A9AFE1C859B5C000F2A79 /* MemberApiModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemberApiModel.swift; sourceTree = "<group>"; };
+		B06A9AFF1C859B5C000F2A79 /* MessagesApiModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagesApiModel.swift; sourceTree = "<group>"; };
+		B06A9B001C859B5C000F2A79 /* NewMemberApiModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewMemberApiModel.swift; sourceTree = "<group>"; };
+		B06A9B011C859B5C000F2A79 /* SocialApiModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialApiModel.swift; sourceTree = "<group>"; };
+		B06A9B021C859B5C000F2A79 /* TokenApiModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokenApiModel.swift; sourceTree = "<group>"; };
+		B06A9B031C859B5C000F2A79 /* ValidationMessagesApiModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidationMessagesApiModel.swift; sourceTree = "<group>"; };
+		B06A9B0D1C859B6A000F2A79 /* Communicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Communicator.swift; sourceTree = "<group>"; };
+		B06A9B0E1C859B6A000F2A79 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		EB34D46CD30F1FFCC60522DA /* Pods_wavelabs_ios_client_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_wavelabs_ios_client_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -100,8 +124,9 @@
 			isa = PBXGroup;
 			children = (
 				B021D58A1C8590C7008CF0D5 /* wavelabs_ios_client_app.h */,
-				B021D5A71C8591FE008CF0D5 /* Helpers */,
-				B021D5A51C8591DA008CF0D5 /* Models */,
+				B06A9B111C859B6C000F2A79 /* Helpers */,
+				B06A9B0C1C859B60000F2A79 /* Models */,
+				B06A9AFB1C859B3A000F2A79 /* API */,
 				B021D5881C8590C7008CF0D5 /* Supporting Files */,
 			);
 			path = wavelabs_ios_client_app;
@@ -130,6 +155,41 @@
 				B021D5961C8590C7008CF0D5 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B06A9AFB1C859B3A000F2A79 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				B06A9AF31C859B2F000F2A79 /* AuthAPI.swift */,
+				B06A9AF41C859B2F000F2A79 /* UsersApi.swift */,
+				B06A9AF51C859B2F000F2A79 /* MediaApi.swift */,
+				B06A9AF61C859B2F000F2A79 /* SocialApi.swift */,
+			);
+			name = API;
+			sourceTree = "<group>";
+		};
+		B06A9B0C1C859B60000F2A79 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B06A9AFC1C859B5C000F2A79 /* MediaApiModel.swift */,
+				B06A9AFD1C859B5C000F2A79 /* MediaFileDetailsApiModel.swift */,
+				B06A9AFE1C859B5C000F2A79 /* MemberApiModel.swift */,
+				B06A9AFF1C859B5C000F2A79 /* MessagesApiModel.swift */,
+				B06A9B001C859B5C000F2A79 /* NewMemberApiModel.swift */,
+				B06A9B011C859B5C000F2A79 /* SocialApiModel.swift */,
+				B06A9B021C859B5C000F2A79 /* TokenApiModel.swift */,
+				B06A9B031C859B5C000F2A79 /* ValidationMessagesApiModel.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		B06A9B111C859B6C000F2A79 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				B06A9B0D1C859B6A000F2A79 /* Communicator.swift */,
+				B06A9B0E1C859B6A000F2A79 /* Utilities.swift */,
+			);
+			name = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -224,8 +284,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B021D5A81C8591FE008CF0D5 /* Helpers in Resources */,
-				B021D5A61C8591DA008CF0D5 /* Models in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,6 +334,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B06A9AF71C859B2F000F2A79 /* AuthAPI.swift in Sources */,
+				B06A9AF91C859B2F000F2A79 /* MediaApi.swift in Sources */,
+				B06A9B101C859B6A000F2A79 /* Utilities.swift in Sources */,
+				B06A9B081C859B5C000F2A79 /* NewMemberApiModel.swift in Sources */,
+				B06A9B051C859B5C000F2A79 /* MediaFileDetailsApiModel.swift in Sources */,
+				B06A9B0A1C859B5C000F2A79 /* TokenApiModel.swift in Sources */,
+				B06A9B061C859B5C000F2A79 /* MemberApiModel.swift in Sources */,
+				B06A9B0B1C859B5C000F2A79 /* ValidationMessagesApiModel.swift in Sources */,
+				B06A9B071C859B5C000F2A79 /* MessagesApiModel.swift in Sources */,
+				B06A9AF81C859B2F000F2A79 /* UsersApi.swift in Sources */,
+				B06A9AFA1C859B2F000F2A79 /* SocialApi.swift in Sources */,
+				B06A9B041C859B5C000F2A79 /* MediaApiModel.swift in Sources */,
+				B06A9B0F1C859B6A000F2A79 /* Communicator.swift in Sources */,
+				B06A9B091C859B5C000F2A79 /* SocialApiModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -391,6 +463,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 541EEC4A9D1D664F2EB5268E /* Pods-wavelabs_ios_client_app.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -400,6 +473,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -407,6 +481,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6355E62698560186F73C914C /* Pods-wavelabs_ios_client_app.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;

@@ -8,7 +8,7 @@ s.summary = "wavelabs_ios_client_app Desc"
 s.requires_arc = true
 
 # 2
-s.version = "0.1.1"
+s.version = "0.1.4"
 
 # 3
 s.license = { :type => "MIT", :file => "LICENSE" }
@@ -43,5 +43,5 @@ s.dependency 'MBProgressHUD', '~> 0.9.0'
 s.source_files = "wavelabs_ios_client_app/**/*.{swift}"
 
 # 9
-s.resources = "wavelabs_ios_client_app/**/*.{png,jpeg,jpg,storyboard,xib}"
+#s.resources = "wavelabs_ios_client_app/**/*.{png,jpeg,jpg,storyboard,xib}"
 end
