@@ -67,7 +67,11 @@ import StarteriOSClientAPI
 ```swift
 
     func handleRegister(newApiModel: NewMemberApiModel) {
-       println("Newmember details \(newApiModel)")        
+       println("Newmember details \(newApiModel)")
+       
+      // Save user access token to NSUserDefaults
+       defaults.setObject(accessToken, forKey: "access_token")
+
     }
     
         
