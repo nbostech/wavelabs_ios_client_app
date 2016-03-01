@@ -19,6 +19,12 @@
 		B031ECB31C85A09C002DDBB6 /* SocialApiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B031ECAB1C85A09C002DDBB6 /* SocialApiModel.swift */; };
 		B031ECB41C85A09C002DDBB6 /* TokenApiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B031ECAC1C85A09C002DDBB6 /* TokenApiModel.swift */; };
 		B031ECB51C85A09C002DDBB6 /* ValidationMessagesApiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B031ECAD1C85A09C002DDBB6 /* ValidationMessagesApiModel.swift */; };
+		B031ECBA1C85A15B002DDBB6 /* AuthAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B031ECB61C85A15B002DDBB6 /* AuthAPI.swift */; };
+		B031ECBB1C85A15B002DDBB6 /* UsersApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = B031ECB71C85A15B002DDBB6 /* UsersApi.swift */; };
+		B031ECBC1C85A15B002DDBB6 /* MediaApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = B031ECB81C85A15B002DDBB6 /* MediaApi.swift */; };
+		B031ECBD1C85A15B002DDBB6 /* SocialApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = B031ECB91C85A15B002DDBB6 /* SocialApi.swift */; };
+		B031ECC01C85A162002DDBB6 /* Communicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B031ECBE1C85A162002DDBB6 /* Communicator.swift */; };
+		B031ECC11C85A162002DDBB6 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = B031ECBF1C85A162002DDBB6 /* Utilities.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +54,12 @@
 		B031ECAB1C85A09C002DDBB6 /* SocialApiModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialApiModel.swift; sourceTree = "<group>"; };
 		B031ECAC1C85A09C002DDBB6 /* TokenApiModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokenApiModel.swift; sourceTree = "<group>"; };
 		B031ECAD1C85A09C002DDBB6 /* ValidationMessagesApiModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidationMessagesApiModel.swift; sourceTree = "<group>"; };
+		B031ECB61C85A15B002DDBB6 /* AuthAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthAPI.swift; sourceTree = "<group>"; };
+		B031ECB71C85A15B002DDBB6 /* UsersApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersApi.swift; sourceTree = "<group>"; };
+		B031ECB81C85A15B002DDBB6 /* MediaApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaApi.swift; sourceTree = "<group>"; };
+		B031ECB91C85A15B002DDBB6 /* SocialApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialApi.swift; sourceTree = "<group>"; };
+		B031ECBE1C85A162002DDBB6 /* Communicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Communicator.swift; sourceTree = "<group>"; };
+		B031ECBF1C85A162002DDBB6 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		EB34D46CD30F1FFCC60522DA /* Pods_wavelabs_ios_client_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_wavelabs_ios_client_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -120,6 +132,12 @@
 				B031ECAB1C85A09C002DDBB6 /* SocialApiModel.swift */,
 				B031ECAC1C85A09C002DDBB6 /* TokenApiModel.swift */,
 				B031ECAD1C85A09C002DDBB6 /* ValidationMessagesApiModel.swift */,
+				B031ECB61C85A15B002DDBB6 /* AuthAPI.swift */,
+				B031ECB71C85A15B002DDBB6 /* UsersApi.swift */,
+				B031ECB81C85A15B002DDBB6 /* MediaApi.swift */,
+				B031ECB91C85A15B002DDBB6 /* SocialApi.swift */,
+				B031ECBE1C85A162002DDBB6 /* Communicator.swift */,
+				B031ECBF1C85A162002DDBB6 /* Utilities.swift */,
 				B021D5881C8590C7008CF0D5 /* Supporting Files */,
 			);
 			path = wavelabs_ios_client_app;
@@ -294,12 +312,18 @@
 			files = (
 				B031ECB11C85A09C002DDBB6 /* MessagesApiModel.swift in Sources */,
 				B031ECB21C85A09C002DDBB6 /* NewMemberApiModel.swift in Sources */,
+				B031ECC11C85A162002DDBB6 /* Utilities.swift in Sources */,
 				B031ECB51C85A09C002DDBB6 /* ValidationMessagesApiModel.swift in Sources */,
 				B031ECAF1C85A09C002DDBB6 /* MediaFileDetailsApiModel.swift in Sources */,
 				B031ECB31C85A09C002DDBB6 /* SocialApiModel.swift in Sources */,
 				B031ECB01C85A09C002DDBB6 /* MemberApiModel.swift in Sources */,
+				B031ECBC1C85A15B002DDBB6 /* MediaApi.swift in Sources */,
 				B031ECB41C85A09C002DDBB6 /* TokenApiModel.swift in Sources */,
+				B031ECBA1C85A15B002DDBB6 /* AuthAPI.swift in Sources */,
 				B031ECAE1C85A09C002DDBB6 /* MediaApiModel.swift in Sources */,
+				B031ECBB1C85A15B002DDBB6 /* UsersApi.swift in Sources */,
+				B031ECC01C85A162002DDBB6 /* Communicator.swift in Sources */,
+				B031ECBD1C85A15B002DDBB6 /* SocialApi.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
