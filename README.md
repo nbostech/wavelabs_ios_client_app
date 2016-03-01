@@ -27,7 +27,7 @@ source 'https://github.com/nbostech/wavelabs_ios_client_app.git'
 platform :ios, '8.0'
 use_frameworks!
 
-pod 'wavelabs_ios_client_app', '~> 0.1.0'
+pod 'wavelabs_ios_client_app', '~> 0.2.5'
 ```
 
   
