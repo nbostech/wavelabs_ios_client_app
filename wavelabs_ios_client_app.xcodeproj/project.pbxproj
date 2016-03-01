@@ -21,6 +21,10 @@
 		B031ECB51C85A09C002DDBB6 /* ValidationMessagesApiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B031ECAD1C85A09C002DDBB6 /* ValidationMessagesApiModel.swift */; };
 		B0D692D01C85A3360064D266 /* Communicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D692CE1C85A3360064D266 /* Communicator.swift */; };
 		B0D692D11C85A3360064D266 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D692CF1C85A3360064D266 /* Utilities.swift */; };
+		B0D692D61C85A40A0064D266 /* AuthAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D692D21C85A40A0064D266 /* AuthAPI.swift */; };
+		B0D692D71C85A40A0064D266 /* UsersApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D692D31C85A40A0064D266 /* UsersApi.swift */; };
+		B0D692D81C85A40A0064D266 /* MediaApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D692D41C85A40A0064D266 /* MediaApi.swift */; };
+		B0D692D91C85A40A0064D266 /* SocialApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D692D51C85A40A0064D266 /* SocialApi.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +56,10 @@
 		B031ECAD1C85A09C002DDBB6 /* ValidationMessagesApiModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidationMessagesApiModel.swift; sourceTree = "<group>"; };
 		B0D692CE1C85A3360064D266 /* Communicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Communicator.swift; sourceTree = "<group>"; };
 		B0D692CF1C85A3360064D266 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		B0D692D21C85A40A0064D266 /* AuthAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthAPI.swift; sourceTree = "<group>"; };
+		B0D692D31C85A40A0064D266 /* UsersApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersApi.swift; sourceTree = "<group>"; };
+		B0D692D41C85A40A0064D266 /* MediaApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaApi.swift; sourceTree = "<group>"; };
+		B0D692D51C85A40A0064D266 /* SocialApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialApi.swift; sourceTree = "<group>"; };
 		EB34D46CD30F1FFCC60522DA /* Pods_wavelabs_ios_client_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_wavelabs_ios_client_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -126,6 +134,10 @@
 				B031ECAD1C85A09C002DDBB6 /* ValidationMessagesApiModel.swift */,
 				B0D692CE1C85A3360064D266 /* Communicator.swift */,
 				B0D692CF1C85A3360064D266 /* Utilities.swift */,
+				B0D692D21C85A40A0064D266 /* AuthAPI.swift */,
+				B0D692D31C85A40A0064D266 /* UsersApi.swift */,
+				B0D692D41C85A40A0064D266 /* MediaApi.swift */,
+				B0D692D51C85A40A0064D266 /* SocialApi.swift */,
 				B021D5881C8590C7008CF0D5 /* Supporting Files */,
 			);
 			path = wavelabs_ios_client_app;
@@ -299,14 +311,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				B0D692D01C85A3360064D266 /* Communicator.swift in Sources */,
+				B0D692D71C85A40A0064D266 /* UsersApi.swift in Sources */,
 				B031ECB11C85A09C002DDBB6 /* MessagesApiModel.swift in Sources */,
+				B0D692D61C85A40A0064D266 /* AuthAPI.swift in Sources */,
 				B031ECB21C85A09C002DDBB6 /* NewMemberApiModel.swift in Sources */,
 				B031ECB51C85A09C002DDBB6 /* ValidationMessagesApiModel.swift in Sources */,
 				B031ECAF1C85A09C002DDBB6 /* MediaFileDetailsApiModel.swift in Sources */,
 				B031ECB31C85A09C002DDBB6 /* SocialApiModel.swift in Sources */,
 				B031ECB01C85A09C002DDBB6 /* MemberApiModel.swift in Sources */,
+				B0D692D91C85A40A0064D266 /* SocialApi.swift in Sources */,
 				B031ECB41C85A09C002DDBB6 /* TokenApiModel.swift in Sources */,
 				B0D692D11C85A3360064D266 /* Utilities.swift in Sources */,
+				B0D692D81C85A40A0064D266 /* MediaApi.swift in Sources */,
 				B031ECAE1C85A09C002DDBB6 /* MediaApiModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
