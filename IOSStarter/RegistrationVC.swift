@@ -21,7 +21,7 @@ class RegistrationVC: UIViewController,GIDSignInUIDelegate,GIDSignInDelegate,get
     var hud : MBProgressHUD = MBProgressHUD()
 
     var kPreferredTextFieldToKeyboardOffset: CGFloat = 600.0
-    var keyboardFrame: CGRect = CGRect.nullRect
+    var keyboardFrame: CGRect = CGRect.null
     var keyboardIsShowing: Bool = false
     weak var activeTextField: UITextField?
     
@@ -145,11 +145,11 @@ class RegistrationVC: UIViewController,GIDSignInUIDelegate,GIDSignInDelegate,get
     
     @IBAction func signUpBtnClicked(sender: AnyObject) {
         
-        var firstNameStr: String = firstNameTF.text
-        var emailStr: String = emailTF.text
-        var passwordStr: String = passwordTF.text
-        var lastNameStr: String = lastNameTF.text
-        var userNameStr: String = userNameTF.text
+        let firstNameStr: String = firstNameTF.text!
+        let emailStr: String = emailTF.text!
+        let passwordStr: String = passwordTF.text!
+        let lastNameStr: String = lastNameTF.text!
+        let userNameStr: String = userNameTF.text!
         
         if(firstNameStr.isEmpty && userNameStr.isEmpty && emailStr.isEmpty && passwordStr.isEmpty){
             

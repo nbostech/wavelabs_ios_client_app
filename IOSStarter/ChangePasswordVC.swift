@@ -61,18 +61,18 @@ class ChangePasswordVC: UIViewController,getAuthApiResponseDelegate{
     @IBAction func changePasswordBtnClicked(sender: AnyObject) {
         self.view.endEditing(true)
 
-        var currentPswdStr: String = currentPasswordTF.text
-        var newPswdStr: String = newPasswordTF.text
+        let currentPswdStr: String = currentPasswordTF.text!
+        let newPswdStr: String = newPasswordTF.text!
         
         if currentPswdStr.isEmpty {
-            var alert = utilities.alertView("Alert", alertMsg: "Please enter current password",actionTitle: "Ok")
+            let alert = utilities.alertView("Alert", alertMsg: "Please enter current password",actionTitle: "Ok")
             self.presentViewController(alert, animated: true, completion: nil)
         }else if newPswdStr.isEmpty{
-            var alert = utilities.alertView("Alert", alertMsg: "Please enter new password",actionTitle: "Ok")
+            let alert = utilities.alertView("Alert", alertMsg: "Please enter new password",actionTitle: "Ok")
             self.presentViewController(alert, animated: true, completion: nil)
         }else{
             
-            var changePswDict : NSMutableDictionary = NSMutableDictionary()
+            let changePswDict : NSMutableDictionary = NSMutableDictionary()
             changePswDict.setObject(currentPswdStr, forKey: "password")
             changePswDict.setObject(newPswdStr, forKey: "newPassword")
             
@@ -95,16 +95,16 @@ class ChangePasswordVC: UIViewController,getAuthApiResponseDelegate{
     
     func moveToLogin(){
         
-        println("Self \(self)")
+        print("Self \(self)")
         
         let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        var loginVC: UINavigationController = mainStoryboard.instantiateViewControllerWithIdentifier("mainNavigation") as! UINavigationController
+        let loginVC: UINavigationController = mainStoryboard.instantiateViewControllerWithIdentifier("mainNavigation") as! UINavigationController
         
         self.presentViewController(loginVC, animated: true, completion: nil)
     }
     
     func handleRefreshTokenResponse(tokenEntity:TokenApiModel){
-        println("tokenEntity \(tokenEntity)")
+        print("tokenEntity \(tokenEntity)")
 
         MBProgressHUD.hideHUDForView(self.view, animated: true)
         let defaults = NSUserDefaults.standardUserDefaults()

@@ -10,7 +10,6 @@ import UIKit
 import Fabric
 import TwitterKit
 import DigitsKit
-//import OAuthSwift
 import wavelabs_ios_client_api
 
 
@@ -65,7 +64,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate,getAuthApiResponseDelegate
         annotation: AnyObject?) -> Bool {
             
             var handled: Bool = false
-            var isFb = url.scheme?.hasPrefix("fb")
+            let isFb = url.scheme.hasPrefix("fb")
             
             if (isFb == true){
                 handled = FBSDKApplicationDelegate.sharedInstance().application(
@@ -115,7 +114,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate,getAuthApiResponseDelegate
     
     
     func handleRefreshTokenResponse(tokenEntity:TokenApiModel){
-        println("tokenEntity \(tokenEntity)")
     
         let defaults = NSUserDefaults.standardUserDefaults()
         let accessToken = tokenEntity.access_token
@@ -150,7 +148,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate,getAuthApiResponseDelegate
         }
         
         
-        println("messages \(errorMessage)")
+        print("messages \(errorMessage)")
 
         var alert = utilities.alertView("Alert", alertMsg: errorMessage as String,actionTitle: "Ok")
     }

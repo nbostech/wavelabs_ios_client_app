@@ -41,15 +41,18 @@ class SlideMenuVC: UIViewController,UITableViewDelegate,getAuthApiResponseDelega
     
     func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell!  {
         //variable type is inferred
-        var cell = tableView.dequeueReusableCellWithIdentifier("CELL") as? UITableViewCell
-        
-        if cell == nil {
-            cell = UITableViewCell(style: UITableViewCellStyle.Value1, reuseIdentifier: "CELL")
-        }
+//        var cell = tableView.dequeueReusableCellWithIdentifier("CELL", forIndexPath: indexPath) as UITableViewCell
+//        var cell = tableView.dequeueReusableCellWithIdentifier("CELL") as? UITableViewCell
+
+        let cell = tableView.dequeueReusableCellWithIdentifier("CELL", forIndexPath: indexPath)
+
+//        if cell == nil {
+//            cell = UITableViewCell(style: UITableViewCellStyle.Value1, reuseIdentifier: "CELL")
+//        }
         
         //we know that cell is not empty now so we use ! to force unwrapping
         
-        cell!.textLabel!.text = menuArray.objectAtIndex(indexPath.row) as? String
+        cell.textLabel!.text = menuArray.objectAtIndex(indexPath.row) as? String
         return cell
     }
 

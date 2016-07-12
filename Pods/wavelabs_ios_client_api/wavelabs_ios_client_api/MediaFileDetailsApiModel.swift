@@ -10,7 +10,6 @@ import Foundation
 
 @objc public class MediaFileDetailsApiModel:NSObject {
     // MARK: Properties
-    
     public var mediapath : String = ""
     public var mediatype : String = ""
     

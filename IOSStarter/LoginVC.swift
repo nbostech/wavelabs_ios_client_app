@@ -84,7 +84,7 @@ class LoginVC: UIViewController,UIAlertViewDelegate,UITextFieldDelegate,UIImageP
         clientTokenDict.setObject(CLIENT_ID, forKey: "client_id")
         clientTokenDict.setObject("client_credentials", forKey: "grant_type")
         clientTokenDict.setObject(CLIENT_SECRET, forKey: "client_secret")
-        clientTokenDict.setObject("oauth.client.r", forKey: "scope")
+        clientTokenDict.setObject("", forKey: "scope")
 
         self.addProgreeHud()
         authApi.getClientToken(clientTokenDict)
@@ -120,8 +120,8 @@ class LoginVC: UIViewController,UIAlertViewDelegate,UITextFieldDelegate,UIImageP
         
         self.view.endEditing(true)
         
-        var emailStr: String = emailTextField.text
-        var passwordStr: String = passwordTextField.text
+        let emailStr: String = emailTextField.text!
+        let passwordStr: String = passwordTextField.text!
         
         if (emailStr.isEmpty && passwordStr.isEmpty){
             utilities.setPlaceHolder(USER_NAME_IN_VALID_PLACEHOLDER, validateText: "Invalid", textField: emailTextField)
@@ -132,7 +132,7 @@ class LoginVC: UIViewController,UIAlertViewDelegate,UITextFieldDelegate,UIImageP
             utilities.setPlaceHolder(PASSWORD_IN_VALID_PLACEHOLDER, validateText: "Invalid", textField: passwordTextField)
         }else{
             
-            var loginDict : NSMutableDictionary = NSMutableDictionary()
+            let loginDict : NSMutableDictionary = NSMutableDictionary()
             loginDict.setObject(emailStr, forKey: "username")
             loginDict.setObject(passwordStr, forKey: "password")
             loginDict.setObject(CLIENT_ID, forKey: "clientId")
@@ -146,7 +146,7 @@ class LoginVC: UIViewController,UIAlertViewDelegate,UITextFieldDelegate,UIImageP
     
     @IBAction func signUpBtnClicked(sender: AnyObject) {
         let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        var registerVC: RegistrationVC = mainStoryboard.instantiateViewControllerWithIdentifier("RegistrationVC") as! RegistrationVC
+        let registerVC: RegistrationVC = mainStoryboard.instantiateViewControllerWithIdentifier("RegistrationVC") as! RegistrationVC
         self.navigationController?.pushViewController(registerVC, animated: true)
     }
     
@@ -255,7 +255,7 @@ class LoginVC: UIViewController,UIAlertViewDelegate,UITextFieldDelegate,UIImageP
                 let email = user.profile.email
                 let accessToken = user.authentication.accessToken // Safe to send to the server
                 
-                var socialLoginDict : NSMutableDictionary = NSMutableDictionary()
+                let socialLoginDict : NSMutableDictionary = NSMutableDictionary()
                 socialLoginDict.setObject(accessToken, forKey: "accessToken")
                 socialLoginDict.setObject("", forKey: "expiresIn")
                 socialLoginDict.setObject(CLIENT_ID, forKey: "clientId")
@@ -282,8 +282,6 @@ class LoginVC: UIViewController,UIAlertViewDelegate,UITextFieldDelegate,UIImageP
                 
                 let oauthSigning = DGTOAuthSigning(authConfig:digits.authConfig, authSession:digits.session())
                 
-                println("digits.session() \(digits.session())")
-                
                 let authHeaders = oauthSigning.OAuthEchoHeadersToVerifyCredentials()
                 
                 let serviceProvider : String = authHeaders?["X-Auth-Service-Provider"] as! String
@@ -297,7 +295,7 @@ class LoginVC: UIViewController,UIAlertViewDelegate,UITextFieldDelegate,UIImageP
                 defaults.synchronize()
                 
                 let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                var digitsSignUpVC: DigitsSignUpVC = mainStoryboard.instantiateViewControllerWithIdentifier("DigitsSignUpVC") as! DigitsSignUpVC
+                let digitsSignUpVC: DigitsSignUpVC = mainStoryboard.instantiateViewControllerWithIdentifier("DigitsSignUpVC") as! DigitsSignUpVC
                 
                 self.navigationController?.pushViewController(digitsSignUpVC, animated: true)
             }
@@ -347,12 +345,12 @@ class LoginVC: UIViewController,UIAlertViewDelegate,UITextFieldDelegate,UIImageP
             if(buttonIndex == 1){
                 let textField: UITextField = alertView.textFieldAtIndex(0)!
                 if(textField.text == ""){
-                    var alert = utilities.alertView("Alert", alertMsg: "Please enter email id",actionTitle: "Ok")
+                    let alert = utilities.alertView("Alert", alertMsg: "Please enter email id",actionTitle: "Ok")
                     self.presentViewController(alert, animated: true, completion: nil)
                 }else{
                     
-                    var forgotPswDict : NSMutableDictionary = NSMutableDictionary()
-                    forgotPswDict.setObject(textField.text, forKey: "email")
+                    let forgotPswDict : NSMutableDictionary = NSMutableDictionary()
+                    forgotPswDict.setObject(textField.text!, forKey: "email")
                     
                     self.addProgreeHud()
                     authApi.forgotPassword(forgotPswDict)
@@ -362,7 +360,7 @@ class LoginVC: UIViewController,UIAlertViewDelegate,UITextFieldDelegate,UIImageP
             if(buttonIndex == 1){
                 
                 let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                var digitsSignUpVC: DigitsSignUpVC = mainStoryboard.instantiateViewControllerWithIdentifier("DigitsSignUpVC") as! DigitsSignUpVC
+                let digitsSignUpVC: DigitsSignUpVC = mainStoryboard.instantiateViewControllerWithIdentifier("DigitsSignUpVC") as! DigitsSignUpVC
                 
                 self.navigationController?.pushViewController(digitsSignUpVC, animated: true)
 
@@ -395,8 +393,8 @@ class LoginVC: UIViewController,UIAlertViewDelegate,UITextFieldDelegate,UIImageP
         
         if(userEntity.tokenApiModel != nil){
             
-            var tokenEty : TokenApiModel = userEntity.tokenApiModel
-            var memberEty : MemberApiModel = userEntity.memberApiModel
+            let tokenEty : TokenApiModel = userEntity.tokenApiModel
+            let memberEty : MemberApiModel = userEntity.memberApiModel
             let defaults = NSUserDefaults.standardUserDefaults()
             let accessToken = tokenEty.access_token
             
@@ -457,15 +455,15 @@ class LoginVC: UIViewController,UIAlertViewDelegate,UITextFieldDelegate,UIImageP
         
         MBProgressHUD.hideHUDForView(self.view, animated: true)
         
-        var errorMessage: NSMutableString = ""
+        let errorMessage: NSMutableString = ""
         
         for var i = 0; i < messageCodeEntityArray.count; i++ {
-            var messageCode : ValidationMessagesApiModel = messageCodeEntityArray.objectAtIndex(i) as! ValidationMessagesApiModel
+            let messageCode : ValidationMessagesApiModel = messageCodeEntityArray.objectAtIndex(i) as! ValidationMessagesApiModel
             let messageStr = messageCode.message
             errorMessage.appendString(messageStr)
         }
         
-        var alert = utilities.alertView("Alert", alertMsg: errorMessage as String,actionTitle: "Ok")
+        let alert = utilities.alertView("Alert", alertMsg: errorMessage as String,actionTitle: "Ok")
         self.presentViewController(alert, animated: true, completion: nil)
     }
     
@@ -500,7 +498,6 @@ class LoginVC: UIViewController,UIAlertViewDelegate,UITextFieldDelegate,UIImageP
         
         if (GIDSignIn.sharedInstance().currentUser != nil) {
             let accessToken = GIDSignIn.sharedInstance().currentUser.authentication.accessToken
-            println("accessToken \(accessToken)")
             // Use accessToken in your URL Requests Header
         }
     }

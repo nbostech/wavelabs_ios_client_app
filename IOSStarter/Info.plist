@@ -119,6 +119,11 @@
 	<string>4521501</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
@@ -143,11 +148,11 @@
 	<key>WavelabsAPISettings</key>
 	<dict>
 		<key>WAVELABS_BASE_URL</key>
-		<string>http://starterapp.com:8080/starter-app-rest-grails/</string>
+		<string>http://api.qa1.nbos.in/</string>
 		<key>WAVELABS_CLIENT_ID</key>
-		<string>my-client</string>
+		<string>sample-app-client</string>
 		<key>WAVELABS_CLIENT_SECRET</key>
-		<string>my-secret</string>
+		<string>sample-app-secret</string>
 	</dict>
 </dict>
 </plist>

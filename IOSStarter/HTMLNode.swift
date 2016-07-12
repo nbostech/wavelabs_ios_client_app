@@ -99,7 +99,7 @@ public class HTMLNode {
     
     public var rawContents : String {
         if node != nil {
-            return rawContentsOfNode(self.node!, self.pointer)
+            return rawContentsOfNode(self.node!, pointer: self.pointer)
         }
         return ""
     }

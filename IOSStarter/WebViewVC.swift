@@ -27,10 +27,10 @@ class WebViewVC: UIViewController,UIWebViewDelegate {
         
         
         let cookieStorage = NSHTTPCookieStorage.sharedHTTPCookieStorage()
-        let cookies = cookieStorage.cookies as! [NSHTTPCookie]
-        println("Cookies.count: \(cookies.count)")
-        for cookie in cookies {
-            println("name: \(cookie.name) value: \(cookie.value)")
+        let cookies = cookieStorage.cookies
+        
+        for cookie in cookies! {
+            print("name: \(cookie.name) value: \(cookie.value)")
             NSHTTPCookieStorage.sharedHTTPCookieStorage().deleteCookie(cookie)
         }
 
@@ -59,7 +59,7 @@ class WebViewVC: UIViewController,UIWebViewDelegate {
             
             if(parentView == "LoginView"){
                 
-                println("navcontroller \(navController.topViewController)")
+                print("navcontroller \(navController.topViewController)")
                 
                 let defaults = NSUserDefaults.standardUserDefaults()
                 defaults.setObject("", forKey: "webViewFailResponse")
@@ -80,44 +80,55 @@ class WebViewVC: UIViewController,UIWebViewDelegate {
     
     func webViewDidStartLoad(webView : UIWebView) {
         let htmlSource : String = redirectWebView.stringByEvaluatingJavaScriptFromString("document.documentElement.outerHTML")!
-        println("htmlSource  while starts loading \(htmlSource)")
+        print("htmlSource  while starts loading \(htmlSource)")
     }
     
     func webViewDidFinishLoad(webView : UIWebView) {
-        println("BB")
-        println("urk \(redirectWebView.request?.URL)")
+        print("BB")
+        print("urk \(redirectWebView.request?.URL)")
         
         let htmlSource : String = redirectWebView.stringByEvaluatingJavaScriptFromString("document.documentElement.outerHTML")!
-        println("htmlSource \(htmlSource)")
+        print("htmlSource \(htmlSource)")
         
         var err : NSError?
-        var parser     = HTMLParser(html: htmlSource, error: &err)
+        let parser     = HTMLParser(html: htmlSource, error: &err)
         if err != nil {
-            println(err)
+            print(err)
             exit(1)
         }
         
-        var bodyNode   = parser.body
+        let bodyNode   = parser.body
         
         if let inputNodes = bodyNode?.findChildTags("b") {
             for node in inputNodes {
-                println("node.contents for b \(node.contents)")
+                print("node.contents for b \(node.contents)")
             }
         }
         
         if let inputNodes = bodyNode?.findChildTags("pre") {
             for node in inputNodes {
                 let temp : String = node.contents
-                println("node.getAttributeNamed pre \(temp)")
+                print("node.getAttributeNamed pre \(temp)")
                 
                 let data = (temp as NSString).dataUsingEncoding(NSUTF8StringEncoding)
 
                 let myHTMLString:String! = "<h1> </h1>"
                 redirectWebView.loadHTMLString(myHTMLString, baseURL: nil)
 
-                var jsonResult = NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.MutableContainers, error: nil) as! NSDictionary
+//                var jsonResult = NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.MutableContainers, error: nil) as! NSDictionary
 
-                println("jsonResult \(jsonResult)")
+                
+                var jsonResult : NSDictionary!
+                
+                do {
+                    jsonResult = try NSJSONSerialization.JSONObjectWithData(data!, options: []) as! [String:AnyObject]
+                    // use anyObj here
+                } catch {
+                    print("json error: \(error)")
+                }
+
+                
+                print("jsonResult \(jsonResult)")
                 
                 var tokenDetails : NSDictionary!
                 var memberDetails : NSDictionary!
@@ -131,8 +142,8 @@ class WebViewVC: UIViewController,UIWebViewDelegate {
                 }
                 
                 
-                println("tokenDetails \(tokenDetails)")
-                println("memberDetails \(memberDetails)")
+                print("tokenDetails \(tokenDetails)")
+                print("memberDetails \(memberDetails)")
                 
 
                 if(tokenDetails != nil && memberDetails != nil){
@@ -156,7 +167,7 @@ class WebViewVC: UIViewController,UIWebViewDelegate {
                 }else{
                     
                     if(jsonResult["message"] != nil){
-                        var alert = UIAlertController(title: "Alert", message: jsonResult["message"] as? String, preferredStyle: UIAlertControllerStyle.Alert)
+                        let alert = UIAlertController(title: "Alert", message: jsonResult["message"] as? String, preferredStyle: UIAlertControllerStyle.Alert)
                         let cancelALertAction: UIAlertAction = UIAlertAction(title: "Ok", style: .Default) { action -> Void in
                             self.rightBtnClicked(self.doneButton)
                         }

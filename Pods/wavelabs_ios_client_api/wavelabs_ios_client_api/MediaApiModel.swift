@@ -10,7 +10,6 @@ import Foundation
 
 @objc public class MediaApiModel:NSObject {
     // MARK: Properties
-    
     public var mediaExtension : String = ""
     public var supportedsizes : String = ""
     

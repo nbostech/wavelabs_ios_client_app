@@ -64,7 +64,7 @@ class SocialLinksVC: UIViewController,GIDSignInUIDelegate,GIDSignInDelegate,getU
         self.title = "Social Links"
         
         // navigation bar background and title colors
-        var nav = self.navigationController?.navigationBar
+        let nav = self.navigationController?.navigationBar
         nav?.barStyle = UIBarStyle.Default
         nav?.tintColor = UIColor.darkGrayColor()
         nav?.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.darkGrayColor()]
@@ -140,18 +140,18 @@ class SocialLinksVC: UIViewController,GIDSignInUIDelegate,GIDSignInDelegate,getU
 
     func refreshSocailViews(){
         socialActs = USER_SOCIAL_CONNECTS
-        var socialActCount : Int = socialActs.count
+        let socialActCount : Int = socialActs.count
         
         
         if(socialActCount > 0){
             self.addUserSocialAccounts(socialActs, view: LinkedAccountsView, isLinkedAccount: true)
             for var i = 0; i < socialActs.count; i++ {
                 
-                var socialActEntity : SocialApiModel = socialActs.objectAtIndex(i) as! SocialApiModel
-                var linkedSocialStr: String = socialActEntity.socialType
+                let socialActEntity : SocialApiModel = socialActs.objectAtIndex(i) as! SocialApiModel
+                let linkedSocialStr: String = socialActEntity.socialType
                 
                 for var j = 0; j < socialLinksArray.count; j++ {
-                    var socailTypeStr: String = socialLinksArray.objectAtIndex(j) as! String
+                    let socailTypeStr: String = socialLinksArray.objectAtIndex(j) as! String
                     if(socailTypeStr == linkedSocialStr){
                         socialLinksArray.removeObject(socailTypeStr)
                         break
@@ -190,7 +190,6 @@ class SocialLinksVC: UIViewController,GIDSignInUIDelegate,GIDSignInDelegate,getU
 
         }else{
             if(UIDeviceOrientationIsLandscape(UIDevice.currentDevice().orientation)){
-                println("landscape")
                 numberOfRows = 8
             }else{
                 numberOfRows = 4
@@ -204,8 +203,10 @@ class SocialLinksVC: UIViewController,GIDSignInUIDelegate,GIDSignInDelegate,getU
 
     
     func createIcons(Btnframe:CGRect, value:String,index: Int,buttonAction : Bool,parentView: UIView){
+       
+        let button = UIButton(type: UIButtonType.Custom)
 
-        let button   = UIButton.buttonWithType(UIButtonType.Custom) as! UIButton
+//        let button   = UIButton.buttonWithType(UIButtonType.Custom) as! UIButton
         button.frame = Btnframe
         button.tag = index
         
@@ -250,8 +251,8 @@ class SocialLinksVC: UIViewController,GIDSignInUIDelegate,GIDSignInDelegate,getU
     
     func buttonAction(sender:UIButton!){
         
-        var socialStrVal: String = socialLinksArray.objectAtIndex(sender.tag) as! String
-        println("socialStrVal \(socialStrVal)")
+        let socialStrVal: String = socialLinksArray.objectAtIndex(sender.tag) as! String
+        print("socialStrVal \(socialStrVal)")
 
         if(socialStrVal == SOCIAL_FACEBOOK_BTN){
             self.fbLogin()
@@ -280,10 +281,10 @@ class SocialLinksVC: UIViewController,GIDSignInUIDelegate,GIDSignInDelegate,getU
                 let expiry = user.authentication // Safe to send to the server
                 let accessToken = user.authentication.accessToken // Safe to send to the server
                 
-                var client_ID = NSBundle.mainBundle().infoDictionary?["WavelabsAPISettings"]!.objectForKey("WAVELABS_CLIENT_ID") as! String
+                let client_ID = NSBundle.mainBundle().infoDictionary?["WavelabsAPISettings"]!.objectForKey("WAVELABS_CLIENT_ID") as! String
                 
                 
-                var socialLoginDict : NSMutableDictionary = NSMutableDictionary()
+                let socialLoginDict : NSMutableDictionary = NSMutableDictionary()
                 socialLoginDict.setObject(accessToken, forKey: "accessToken")
                 socialLoginDict.setObject("", forKey: "expiresIn")
                 socialLoginDict.setObject(CLIENT_ID, forKey: "clientId")
@@ -299,10 +300,10 @@ class SocialLinksVC: UIViewController,GIDSignInUIDelegate,GIDSignInDelegate,getU
     // MARK: - Facebook Delegate Methods
 
     func fbLogin() {
-        var fbLoginManager : FBSDKLoginManager = FBSDKLoginManager()
+        let fbLoginManager : FBSDKLoginManager = FBSDKLoginManager()
         fbLoginManager.logInWithReadPermissions(["email"], fromViewController: self, handler: { (result, error) -> Void in
             if (error == nil){
-                var fbloginresult : FBSDKLoginManagerLoginResult = result
+                let fbloginresult : FBSDKLoginManagerLoginResult = result
                 
                 if(fbloginresult.grantedPermissions != nil){
                     if(fbloginresult.grantedPermissions.contains("email")){
@@ -318,7 +319,7 @@ class SocialLinksVC: UIViewController,GIDSignInUIDelegate,GIDSignInDelegate,getU
     
         let fbAccessToken = FBSDKAccessToken.currentAccessToken().tokenString
 
-        var socialLoginDict : NSMutableDictionary = NSMutableDictionary()
+        let socialLoginDict : NSMutableDictionary = NSMutableDictionary()
         socialLoginDict.setObject(fbAccessToken, forKey: "accessToken")
         socialLoginDict.setObject("", forKey: "expiresIn")
         socialLoginDict.setObject(CLIENT_ID, forKey: "clientId")
@@ -356,8 +357,8 @@ class SocialLinksVC: UIViewController,GIDSignInUIDelegate,GIDSignInDelegate,getU
         
         var originX : CGFloat = iconOrigionX
         var origioY : CGFloat = 0
-        var width : CGFloat = iconWidth
-        var height : CGFloat = iconHeight
+        let width : CGFloat = iconWidth
+        let height : CGFloat = iconHeight
         
         for var index = 0; index < socialArrays.count; index++ {
             var socialActType : String = ""
@@ -403,7 +404,7 @@ class SocialLinksVC: UIViewController,GIDSignInUIDelegate,GIDSignInDelegate,getU
                 mainScrollview.addConstraint(linkeAccountsheightConstraint)
             }
             
-            var val: Int = index+1
+            let val: Int = index+1
             var value : Int = val%numberOfRows
             
             if(val%numberOfRows != 0){
@@ -436,7 +437,7 @@ class SocialLinksVC: UIViewController,GIDSignInUIDelegate,GIDSignInDelegate,getU
         
         for var i = 0; i < socialActs.count; i++ {
             var socailActDict : SocialApiModel = socialActs.objectAtIndex(i) as! SocialApiModel
-            var linkedSocialStr: String = socailActDict.socialType
+            let linkedSocialStr: String = socailActDict.socialType
 
             for var j = 0; j < socialLinksArray.count; j++ {
                 var socailTypeStr: String = socialLinksArray.objectAtIndex(j) as! String
@@ -466,7 +467,7 @@ class SocialLinksVC: UIViewController,GIDSignInUIDelegate,GIDSignInDelegate,getU
         MBProgressHUD.hideHUDForView(self.view, animated: true)
 
         let messageStr = messageCodeEntity.message
-        var alert = utilities.alertView("Alert", alertMsg: messageStr,actionTitle: "Ok")
+        let alert = utilities.alertView("Alert", alertMsg: messageStr,actionTitle: "Ok")
         self.presentViewController(alert, animated: true, completion: nil)
     }
 
@@ -495,7 +496,7 @@ class SocialLinksVC: UIViewController,GIDSignInUIDelegate,GIDSignInDelegate,getU
             self.redirectUrl = responseDict.objectForKey("url") as! String
             
             let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            var webViewVC: WebViewVC = mainStoryboard.instantiateViewControllerWithIdentifier("WebViewVC") as! WebViewVC
+            let webViewVC: WebViewVC = mainStoryboard.instantiateViewControllerWithIdentifier("WebViewVC") as! WebViewVC
             webViewVC.redirectUrl = redirectUrl
             webViewVC.headerTitle = webViewTitle
             webViewVC.parentView  = "SocialLinkView"
@@ -503,7 +504,7 @@ class SocialLinksVC: UIViewController,GIDSignInUIDelegate,GIDSignInDelegate,getU
             
         }else{
             if(responseDict["message"] != nil){
-                var alert = utilities.alertView("Alert", alertMsg: responseDict["message"] as! String, actionTitle: "Ok")
+                let alert = utilities.alertView("Alert", alertMsg: responseDict["message"] as! String, actionTitle: "Ok")
                 self.presentViewController(alert, animated: true, completion: nil)
             }
         }
@@ -511,8 +512,8 @@ class SocialLinksVC: UIViewController,GIDSignInUIDelegate,GIDSignInDelegate,getU
         
     func handleRefreshToken(JSON : AnyObject){
         MBProgressHUD.hideHUDForView(self.view, animated: true)
-        println("Refresh token")
-        println("JSON \(JSON)")
+        print("Refresh token")
+        print("JSON \(JSON)")
         
         self.addProgreeHud()
         authApi.refreshToken()
@@ -521,10 +522,10 @@ class SocialLinksVC: UIViewController,GIDSignInUIDelegate,GIDSignInDelegate,getU
     
     func moveToLogin(){
         
-        println("Self \(self)")
+        print("Self \(self)")
         
         let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        var loginVC: UINavigationController = mainStoryboard.instantiateViewControllerWithIdentifier("mainNavigation") as! UINavigationController
+        let loginVC: UINavigationController = mainStoryboard.instantiateViewControllerWithIdentifier("mainNavigation") as! UINavigationController
         
         self.presentViewController(loginVC, animated: true, completion: nil)
     }
@@ -535,7 +536,7 @@ class SocialLinksVC: UIViewController,GIDSignInUIDelegate,GIDSignInDelegate,getU
         
         
         let messageStr = messageCodeEntity.message
-        var alert = utilities.alertView("Alert", alertMsg: messageStr,actionTitle: "Ok")
+        let alert = utilities.alertView("Alert", alertMsg: messageStr,actionTitle: "Ok")
         self.presentViewController(alert, animated: true, completion: nil)
     }
     
@@ -544,15 +545,15 @@ class SocialLinksVC: UIViewController,GIDSignInUIDelegate,GIDSignInDelegate,getU
         
         MBProgressHUD.hideHUDForView(self.view, animated: true)
         
-        var errorMessage: NSMutableString = ""
+        let errorMessage: NSMutableString = ""
         
         for var i = 0; i < messageCodeEntityArray.count; i++ {
-            var messageCode : ValidationMessagesApiModel = messageCodeEntityArray.objectAtIndex(i) as! ValidationMessagesApiModel
+            let messageCode : ValidationMessagesApiModel = messageCodeEntityArray.objectAtIndex(i) as! ValidationMessagesApiModel
             let messageStr = messageCode.message
             errorMessage.appendString(messageStr)
         }
         
-        var alert = utilities.alertView("Alert", alertMsg: errorMessage as String,actionTitle: "Ok")
+        let alert = utilities.alertView("Alert", alertMsg: errorMessage as String,actionTitle: "Ok")
         self.presentViewController(alert, animated: true, completion: nil)
     }
 

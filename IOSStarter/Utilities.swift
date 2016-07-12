@@ -186,7 +186,7 @@ class utilities {
 
             parameters[key] = value
         }
-        println("parameters \(parameters)")
+        print("parameters \(parameters)")
         return parameters
     }
     

@@ -15,7 +15,7 @@ pod 'FBSDKLoginKit'
 pod 'Google/SignIn'
 
 
-pod 'wavelabs_ios_client_api', '~> 0.1.0'
+pod 'wavelabs_ios_client_api', '~> 0.2.9'
 
 end
 

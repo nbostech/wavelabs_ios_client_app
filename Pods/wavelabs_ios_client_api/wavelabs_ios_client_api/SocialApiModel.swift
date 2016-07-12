@@ -12,8 +12,6 @@ import UIKit
 
 public class SocialApiModel :NSObject{
     // MARK: Properties
-    
-    
     public var email: String = ""
     public var id: Int = 0
     public var imageUrl: String = ""

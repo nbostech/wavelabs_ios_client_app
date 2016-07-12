@@ -83,16 +83,15 @@ class SettingsVC: UIViewController,UINavigationControllerDelegate,UIImagePickerC
 
         self.addProgreeHud()
         usersApi.getProfile()
-        println("userID \(userID)")
 
     }
     
     // MARK: - Button actions
 
     @IBAction func updateBtnClicked(sender: AnyObject) {
-        var firstNameStr : String = firstNameTF.text
-        var lastNameStr : String = lastNameTF.text
-        var emailStr : String = emailTF.text
+        var firstNameStr : String = firstNameTF.text!
+        var lastNameStr : String = lastNameTF.text!
+        var emailStr : String = emailTF.text!
         
         if firstNameStr.isEmpty{
             var alert = utilities.alertView("Alert", alertMsg: FIRST_NAME_IN_VALID_PLACEHOLDER,actionTitle: "Ok")
@@ -142,7 +141,6 @@ class SettingsVC: UIViewController,UINavigationControllerDelegate,UIImagePickerC
             
             let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel, handler: {
                 (alert: UIAlertAction!) -> Void in
-                println("Cancelled")
             })
             alert.addAction(cancelAction)
             
@@ -186,15 +184,15 @@ class SettingsVC: UIViewController,UINavigationControllerDelegate,UIImagePickerC
         var backgroundQueue = NSOperationQueue()
         
         backgroundQueue.addOperationWithBlock(){
-            println("hello from background")
             NSOperationQueue.mainQueue().addOperationWithBlock(){
-                self.popOver?.presentPopoverFromRect(CGRectMake(uploadImageButton.frame.origin.x,uploadImageButton.frame.origin.y,100,80), inView: self.view, permittedArrowDirections: UIPopoverArrowDirection.Any, animated: true)
+                self.popOver?.presentPopoverFromRect(CGRectMake(self.uploadImageButton.frame.origin.x,self.uploadImageButton.frame.origin.y,100,80), inView: self.view, permittedArrowDirections: UIPopoverArrowDirection.Any, animated: true)
             }
         }
     }
 
-    
-    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [NSObject : AnyObject]) {
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+
+//    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [NSObject : AnyObject]) {
         
         let selectedImg = info[UIImagePickerControllerOriginalImage] as! UIImage
         userImageView.contentMode = .ScaleAspectFit //3
@@ -202,41 +200,70 @@ class SettingsVC: UIViewController,UINavigationControllerDelegate,UIImagePickerC
         dismissViewControllerAnimated(true, completion: nil) //5
     
         
-        var dirPath: String = ""
-        
+//        var dirPath: String = ""
+//        
         let nsDocumentDirectory = NSSearchPathDirectory.DocumentDirectory
         let nsUserDomainMask    = NSSearchPathDomainMask.UserDomainMask
+//
+//        
+//        if let paths = NSSearchPathForDirectoriesInDomains(nsDocumentDirectory, nsUserDomainMask, true){
+//        
+//        
+////        if let paths            = NSSearchPathForDirectoriesInDomains(nsDocumentDirectory, nsUserDomainMask, true){
+//            if paths.count > 0{
+//                dirPath = (paths[0] as? String)!
+//            }
+//        }
         
-        if let paths            = NSSearchPathForDirectoriesInDomains(nsDocumentDirectory, nsUserDomainMask, true){
-            if paths.count > 0{
-                dirPath = (paths[0] as? String)!
-            }
-        }
+//        var dirPath = NSSearchPathForDirectoriesInDomains(nsDocumentDirectory, nsUserDomainMask, true)
+//        let dirpathStr : String = dirPath[0]
+//        
+//        let imagesDirectory = NSURL(fileURLWithPath: dirpathStr).URLByAppendingPathComponent("Images")
+
+//        var imagesDirectory : String = dirpathStr.stringByAppendingPathComponent("Images")
         
-        var imagesDirectory : String = dirPath.stringByAppendingPathComponent("Images")
-        
-        var fileManager : NSFileManager = NSFileManager.defaultManager()
-        var err: NSError
-        var isDir : ObjCBool = false
+//        var fileManager : NSFileManager = NSFileManager.defaultManager()
+//        let err: NSError
+//        var isDir : ObjCBool = false
         
         
         let defaults = NSUserDefaults.standardUserDefaults()
         let userID = defaults.stringForKey("user_id")
         
-        var fileName : String =  NSString(format:"%@.png", userID!) as String
+        let fileName : String =  NSString(format:"%@.png", userID!) as String
         
-        if (!NSFileManager.defaultManager().fileExistsAtPath(imagesDirectory)) {
-            NSFileManager.defaultManager().createDirectoryAtPath(imagesDirectory, withIntermediateDirectories: false, attributes: nil, error:nil)
+        
+        
+        let fileManager = NSFileManager.defaultManager()
+        let docsURL = try! fileManager.URLForDirectory(.DocumentDirectory, inDomain: .UserDomainMask, appropriateForURL: nil, create: false)
+
+        let imageDirURL = docsURL.URLByAppendingPathComponent("Images")
+        
+        if !fileManager.fileExistsAtPath(imageDirURL.path!) {
+            do {
+                try fileManager.createDirectoryAtURL(imageDirURL, withIntermediateDirectories: false, attributes:nil)
+            } catch let error as NSError{
+                print("Error creating SwiftData image folder", error)
+            }
         }
+
+
         
-        var storePath : String = imagesDirectory.stringByAppendingPathComponent(fileName)
         
-        var imgData : NSData = UIImagePNGRepresentation(selectedImg)
-        imgData.writeToFile(storePath, atomically: true)
+        let storePath = NSURL(fileURLWithPath: imageDirURL.path!).URLByAppendingPathComponent(fileName)
+
+        
+//        var storePath : String = imagesDirectory.stringByAppendingPathComponent(fileName)
+        
+        let imgData : NSData = UIImagePNGRepresentation(selectedImg)!
+//        imgData.writeToFile(storePath, atomically: true)
+        imgData.writeToURL(storePath, atomically: false)
 
         
         self.addProgreeHud()
-        mediaApi.uploadMedia()
+        mediaApi.uploadMedia("Profile", imgName: fileName, userID: userID!)
+        
+//        mediaApi.uploadMedia()
     }
 
     

@@ -19,14 +19,12 @@ import Alamofire
     optional func handleMessages(messageCodeEntity: MessagesApiModel)
     optional func handleValidationErrors(messageCodeEntityArray: NSArray) // multiple MessagesRespApiModel - 404(Validation errors)
     optional func handleRefreshToken(JSON : AnyObject) // multiple MessagesRespApiModel - 404(Validation errors)
-
+    
 }
 
 
 public class SocialApi {
-    
-    
-    
+        
     public init() {
         
     }
@@ -37,186 +35,170 @@ public class SocialApi {
     var fbConnectUrl : String = "facebook/connect"
     var googleConnectUrl : String = "googlePlus/connect"
     var digitsLoginUrl : String = "digits/connect"
-
+    
     var gitLoginUrl : String = "gitHub/login"
     var linkedInLoginUrl : String = "linkedIn/login"
     var instagramLoginUrl : String = "instagram/login"
-
+    
     var utilities : Utilities = Utilities()
-
+    
     
     public var delegate: getSocialApiResponseDelegate?
     
     public func socialLogin(socialLoginDetails : NSDictionary, socialType : String){
-        var socialConnectUrl : String = "\(socialType)/connect"
+        let socialConnectUrl : String = "\(socialType)/connect"
         
-        var requestUrl = "\(WAVELABS_HOST_URL)\(socialIdentityApiUrl)\(socialConnectUrl)"
+        let requestUrl = "\(WAVELABS_HOST_URL)\(socialIdentityApiUrl)\(socialConnectUrl)"
         let token: AnyObject = utilities.getClientAccessToken()
-
-        Alamofire.request(.POST, requestUrl, parameters: utilities.getParams(socialLoginDetails), encoding: .JSON, headers : ["Authorization" : "Bearer \(token)"])
-            .responseJSON { request, response, JSON, error in
-
-                var statusCode : Int = response!.statusCode
+        
+        Alamofire.request(.POST, requestUrl, parameters: utilities.getParams(socialLoginDetails), encoding:.JSON, headers : ["Authorization" : "Bearer \(token)"]).responseJSON
+            { response in switch response.result {
+            case .Success(let JSON):
+                print("Success with JSON: \(JSON)")
                 
-                if(JSON != nil){
-                    if(response!.statusCode == 200){
-                        var userEntity : NewMemberApiModel = Communicator.userEntityFromJSON(JSON!)
-                        self.delegate!.handleLogin!(userEntity)
-                    }else if(response!.statusCode == 400){
-                        
-                        self.validationErrorsCodes(JSON!)
-                        
-                    }else if(response!.statusCode == 401){
-                        
-                    }else {
-                        self.messagesErrorsCodes(JSON!)
-                    }
+                let jsonResp = JSON
+                if(response.response?.statusCode == 200){
+                    let userEntity : NewMemberApiModel = Communicator.userEntityFromJSON(jsonResp)
+                    self.delegate!.handleLogin!(userEntity)
+                }else if(response.response?.statusCode == 400){
+                    self.validationErrorsCodes(jsonResp)
+                }else{
+                    self.messagesErrorsCodes(jsonResp)
                 }
+                
+            case .Failure(let error):
+                print("Request failed with error: \(error)")
+            }
         }
     }
     
     public func socialWebLogin(socialType : String) {
         
-
-        var socialwebLinkUrl : String = "\(socialType)/login"
-
-        var requestUrl = "\(WAVELABS_HOST_URL)\(socialIdentityApiUrl)\(socialwebLinkUrl)"
+        
+        let socialwebLinkUrl : String = "\(socialType)/login"
+        
+        let requestUrl = "\(WAVELABS_HOST_URL)\(socialIdentityApiUrl)\(socialwebLinkUrl)"
         let token: AnyObject = utilities.getClientAccessToken()
         
-        Alamofire.request(.GET, requestUrl, parameters: nil, encoding: .JSON, headers : ["Authorization" : "Bearer \(token)"])
-            .responseJSON { request, response, JSON, error in
-                print(response)
-                print(JSON)
-                print(error)
-                println(response?.statusCode)
+        Alamofire.request(.GET, requestUrl, parameters: nil, encoding:.JSON, headers : ["Authorization" : "Bearer \(token)"]).responseJSON
+            { response in switch response.result {
+            case .Success(let JSON):
+                print("Success with JSON: \(JSON)")
                 
-                var statusCode : Int = response!.statusCode
-                
-                if(JSON != nil){
-                    
-                    if(response!.statusCode == 200){
-                        var respDict : NSDictionary = Communicator.webLinkLoginFromJSON(JSON!)
-                        self.delegate!.handleWebLinkLoginResponse!(respDict)
-                    }else if(response!.statusCode == 400){
-                        
-                        self.validationErrorsCodes(JSON!)
-                        
-                    }else if(response!.statusCode == 401){
-                        
-                    }else {
-                        self.messagesErrorsCodes(JSON!)
-                    }
+                let jsonResp = JSON
+                if(response.response?.statusCode == 200){
+                    let respDict : NSDictionary = Communicator.webLinkLoginFromJSON(jsonResp)
+                    self.delegate!.handleWebLinkLoginResponse!(respDict)
+                }else if(response.response?.statusCode == 400){
+                    self.validationErrorsCodes(jsonResp)
+                }else{
+                    self.messagesErrorsCodes(jsonResp)
                 }
+                
+            case .Failure(let error):
+                print("Request failed with error: \(error)")
+            }
         }
     }
     
     public func digitsLoginUser(digitsLogin : NSDictionary) {
         
-
-        var requestUrl = "\(WAVELABS_HOST_URL)\(socialIdentityApiUrl)\(digitsLoginUrl)"
+        
+        let requestUrl = "\(WAVELABS_HOST_URL)\(socialIdentityApiUrl)\(digitsLoginUrl)"
         let token: AnyObject = utilities.getClientAccessToken()
-
-        Alamofire.request(.POST, requestUrl, parameters: utilities.getParams(digitsLogin), encoding: .JSON, headers : ["Authorization" : "Bearer \(token)"])
-            .responseJSON { request, response, JSON, error in
-                print(response)
-                print(JSON)
-                print(error)
-                println(response?.statusCode)
+        
+        Alamofire.request(.POST, requestUrl, parameters: utilities.getParams(digitsLogin), encoding:.JSON, headers : ["Authorization" : "Bearer \(token)"]).responseJSON
+            { response in switch response.result {
+            case .Success(let JSON):
+                print("Success with JSON: \(JSON)")
                 
-                var statusCode : Int = response!.statusCode
+                let jsonResp = JSON
                 
-                if(JSON != nil){
-                    if(response!.statusCode == 200){
-                        var userEntity : NewMemberApiModel = Communicator.userEntityFromJSON(JSON!)
-                        self.delegate!.handleLogin!(userEntity)
-                    }else if(response!.statusCode == 400){
-                        self.validationErrorsCodes(JSON!)
-                    }else if(response!.statusCode == 401){
-                        
-                    }else {
-                        self.messagesErrorsCodes(JSON!)
-                    }
+                if(response.response?.statusCode == 200){
+                    let userEntity : NewMemberApiModel = Communicator.userEntityFromJSON(jsonResp)
+                    self.delegate!.handleLogin!(userEntity)
+                }else if(response.response?.statusCode == 400){
+                    self.validationErrorsCodes(jsonResp)
+                }else{
+                    self.messagesErrorsCodes(jsonResp)
                 }
+                
+            case .Failure(let error):
+                print("Request failed with error: \(error)")
+            }
         }
     }
     
     public func socialConnect(socialLoginDetails : NSDictionary, socialType : String){
-    
-    
-        var socialConnectUrl : String = "\(socialType)/connect"
-        var requestUrl = "\(WAVELABS_HOST_URL)\(socialIdentityApiUrl)\(socialConnectUrl)"
+        
+        
+        let socialConnectUrl : String = "\(socialType)/connect"
+        let requestUrl = "\(WAVELABS_HOST_URL)\(socialIdentityApiUrl)\(socialConnectUrl)"
         
         let token: AnyObject = utilities.getUserAccessToken()
-    
-        Alamofire.request(.POST, requestUrl, parameters: utilities.getParams(socialLoginDetails), encoding: .JSON, headers : ["Authorization" : "Bearer \(token)"])
-            .responseJSON { request, response, JSON, error in
-                print(response)
-                print(JSON)
-                print(error)
-                println(response?.statusCode)
+        
+        
+        
+        Alamofire.request(.POST, requestUrl, parameters: utilities.getParams(socialLoginDetails), encoding:.JSON, headers : ["Authorization" : "Bearer \(token)"]).responseJSON
+            { response in switch response.result {
+            case .Success(let JSON):
+                print("Success with JSON: \(JSON)")
                 
-                var statusCode : Int = response!.statusCode
+                let jsonResp = JSON
                 
-                if(JSON != nil){
-                    
-                    
-                    if(response!.statusCode == 200){
-                        var messageCodeEntity : MessagesApiModel = Communicator.respMessageCodesFromJson(JSON!)
-                        self.delegate!.handleMessages!(messageCodeEntity)
-                    }else if(response!.statusCode == 400){
-                        self.validationErrorsCodes(JSON!)
-                    }else if(response!.statusCode == 401){
-                        self.delegate!.handleRefreshToken!(JSON!)
-                    }else {
-                        self.messagesErrorsCodes(JSON!)
-                    }
+                if(response.response?.statusCode == 200){
+                    let messageCodeEntity : MessagesApiModel = Communicator.respMessageCodesFromJson(jsonResp)
+                    self.delegate!.handleMessages!(messageCodeEntity)
+                }else if(response.response?.statusCode == 400){
+                    self.validationErrorsCodes(jsonResp)
+                }else{
+                    self.messagesErrorsCodes(jsonResp)
                 }
+                
+            case .Failure(let error):
+                print("Request failed with error: \(error)")
+            }
         }
-
     }
     
     public func socialWebConnect(socialType : String){
         
-        var socialwebLinkUrl : String = "\(socialType)/login"
-        var requestUrl = "\(WAVELABS_HOST_URL)\(socialIdentityApiUrl)\(socialwebLinkUrl)"
-
+        let socialwebLinkUrl : String = "\(socialType)/login"
+        let requestUrl = "\(WAVELABS_HOST_URL)\(socialIdentityApiUrl)\(socialwebLinkUrl)"
+        
         let token: AnyObject = utilities.getUserAccessToken()
-
-        Alamofire.request(.GET, requestUrl, parameters: nil, encoding: .JSON, headers : ["Authorization" : "Bearer \(token)"])
-            .responseJSON { request, response, JSON, error in
-                print(response)
-                print(JSON)
-                print(error)
-                println(response?.statusCode)
+        
+        
+        Alamofire.request(.GET, requestUrl, parameters: nil, encoding:.JSON, headers : ["Authorization" : "Bearer \(token)"]).responseJSON
+            { response in switch response.result {
+            case .Success(let JSON):
+                print("Success with JSON: \(JSON)")
                 
-                var statusCode : Int = response!.statusCode
+                let jsonResp = JSON
                 
-                if(JSON != nil){
-                    
-                    if(response!.statusCode == 200){
-                        var respDict : NSDictionary = Communicator.webLinkLoginFromJSON(JSON!)
-                        self.delegate!.handleWebLinkLoginResponse!(respDict)
-                    }else if(response!.statusCode == 400){
-                        
-                        self.validationErrorsCodes(JSON!)
-                        
-                    }else if(response!.statusCode == 401){
-                        self.delegate!.handleRefreshToken!(JSON!)
-                        
-                    }else {
-                        self.messagesErrorsCodes(JSON!)
-                    }
+                if(response.response?.statusCode == 200){
+                    let respDict : NSDictionary = Communicator.webLinkLoginFromJSON(jsonResp)
+                    self.delegate!.handleWebLinkLoginResponse!(respDict)
+                }else if(response.response?.statusCode == 400){
+                    self.validationErrorsCodes(jsonResp)
+                }else{
+                    self.messagesErrorsCodes(jsonResp)
                 }
+                
+            case .Failure(let error):
+                print("Request failed with error: \(error)")
+            }
         }
+        
     }
     
     public func validationErrorsCodes(JSON : AnyObject){
-        var validationErrors : NSArray = Communicator.respValidationMessageCodesFromJson(JSON)
+        let validationErrors : NSArray = Communicator.respValidationMessageCodesFromJson(JSON)
         self.delegate!.handleValidationErrors!(validationErrors)
     }
     
     public func messagesErrorsCodes(JSON : AnyObject){
-        var messageCodeEntity : MessagesApiModel = Communicator.respMessageCodesFromJson(JSON)
+        let messageCodeEntity : MessagesApiModel = Communicator.respMessageCodesFromJson(JSON)
         self.delegate!.handleMessages!(messageCodeEntity)
     }
 }

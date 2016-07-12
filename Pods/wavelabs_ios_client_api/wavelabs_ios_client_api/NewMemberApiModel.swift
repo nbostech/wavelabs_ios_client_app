@@ -10,8 +10,6 @@ import Foundation
 
 @objc public class NewMemberApiModel:NSObject {
     // MARK: Properties
-    
-    
     public var memberApiModel : MemberApiModel!
     public var tokenApiModel : TokenApiModel!
 }

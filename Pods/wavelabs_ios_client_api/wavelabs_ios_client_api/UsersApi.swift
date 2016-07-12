@@ -18,8 +18,6 @@ import Alamofire
     optional func handleMessages(messageCodeEntity: MessagesApiModel)
     optional func handleValidationErrors(messageCodeEntityArray: NSArray) // multiple MessagesRespApiModel - 404(Validation errors)
     optional func handleRefreshToken(JSON : AnyObject) // multiple MessagesRespApiModel - 404(Validation errors)
-
-    
 }
 
 public class UsersApi {
@@ -30,7 +28,7 @@ public class UsersApi {
     public var delegate: getUsersApiResponseDelegate?
     
     var utilities : Utilities = Utilities()
-
+    
     
     public init() {
         
@@ -38,30 +36,28 @@ public class UsersApi {
     
     public func registerUser(userRegister : NSDictionary) {
         
-        var requestUrl = "\(WAVELABS_HOST_URL)\(identityApiUrl)\(rigistrationUrl)"
+        let requestUrl = "\(WAVELABS_HOST_URL)\(identityApiUrl)\(rigistrationUrl)"
         let token: AnyObject = utilities.getClientAccessToken()
         
-        Alamofire.request(.POST, requestUrl, parameters: utilities.getParams(userRegister), encoding: .JSON, headers : ["Authorization" : "Bearer \(token)"])
-            .responseJSON { request, response, JSON, error in
-                
-                var statusCode : Int = response!.statusCode
-                
-                if(JSON != nil){
-                    if(response!.statusCode == 200){
-                        var newMemberApi : NewMemberApiModel = Communicator.userEntityFromJSON(JSON!)
-                        self.delegate!.handleRegister!(newMemberApi)
-                    }else if(response!.statusCode == 400){
-                        self.validationErrorsCodes(JSON!)
-                    }else if(response!.statusCode == 401){
-                        
-                    }else {
-                        self.messagesErrorsCodes(JSON!)
-                    }
-                    
+        Alamofire.request(.POST, requestUrl, parameters: utilities.getParams(userRegister), encoding:.JSON, headers : ["Authorization" : "Bearer \(token)"]).responseJSON
+            { response in switch response.result {
+            case .Success(let JSON):
+                let jsonResp = JSON
+                if(response.response?.statusCode == 200){
+                    let newMemberApi : NewMemberApiModel = Communicator.userEntityFromJSON(jsonResp)
+                    self.delegate!.handleRegister!(newMemberApi)
+                }else if(response.response?.statusCode == 400){
+                    self.validationErrorsCodes(jsonResp)
+                }else{
+                    self.messagesErrorsCodes(jsonResp)
                 }
+            case .Failure(let error):
+                print("Request failed with error: \(error)")
+            }
         }
+        
     }
-
+    
     public func getProfile() {
         
         let defaults = NSUserDefaults.standardUserDefaults()
@@ -73,35 +69,33 @@ public class UsersApi {
             userID = defaults.stringForKey("user_id")!
         }
         
-        var requestUrl = "\(WAVELABS_HOST_URL)\(identityApiUrl)\(userID)"
+        let requestUrl = "\(WAVELABS_HOST_URL)\(identityApiUrl)\(userID)"
         let token: AnyObject = utilities.getUserAccessToken()
         
         
-        Alamofire.request(.GET, requestUrl, parameters: nil, encoding: .JSON, headers : ["Authorization" : "Bearer \(token)"])
-            .responseJSON { request, response, JSON, error in
+        Alamofire.request(.GET, requestUrl, parameters: nil, encoding:.JSON, headers : ["Authorization" : "Bearer \(token)"]).responseJSON
+            { response in switch response.result {
+            case .Success(let JSON):
+                print("Success with JSON: \(JSON)")
                 
-                var statusCode : Int = response!.statusCode
-                
-                if(JSON != nil){
-                    
-                    if(response!.statusCode == 200){
-                        var memberDetails : MemberApiModel = Communicator.ProfileFromJson(JSON!)
-                        self.delegate!.handleProfile!(memberDetails)
-                    }else if(response!.statusCode == 400){
-                        self.validationErrorsCodes(JSON!)
-                    }else if(response!.statusCode == 401){
-                        self.delegate!.handleRefreshToken!(JSON!)
-                    }else {
-                        self.messagesErrorsCodes(JSON!)
-                    }
+                let jsonResp = JSON
+                if(response.response?.statusCode == 200){
+                    let memberDetails : MemberApiModel = Communicator.ProfileFromJson(jsonResp)
+                    self.delegate!.handleProfile!(memberDetails)
+                }else if(response.response?.statusCode == 400){
+                    self.validationErrorsCodes(jsonResp)
+                }else{
+                    self.messagesErrorsCodes(jsonResp)
                 }
+            case .Failure(let error):
+                print("Request failed with error: \(error)")
+            }
         }
     }
     
     public func updateProfile(profile : NSDictionary) {
         
-        
-        var utilities : Utilities = Utilities()
+        let utilities : Utilities = Utilities()
         let defaults = NSUserDefaults.standardUserDefaults()
         var userID : String
         
@@ -111,45 +105,36 @@ public class UsersApi {
             userID = defaults.stringForKey("user_id")!
         }
         
-        
-        var requestUrl = "\(WAVELABS_HOST_URL)\(identityApiUrl)\(userID)"
+        let requestUrl = "\(WAVELABS_HOST_URL)\(identityApiUrl)\(userID)"
         let token: AnyObject = utilities.getUserAccessToken()
         
-        
-        Alamofire.request(.PUT, requestUrl, parameters: utilities.getParams(profile), encoding: .JSON, headers : ["Authorization" : "Bearer \(token)"])
-            .responseJSON { request, response, JSON, error in
-                print(response)
-                print(JSON)
-                print(error)
-                println(response?.statusCode)
-                
-                var statusCode : Int = response!.statusCode
-                
-                if(JSON != nil){
-                    if(response!.statusCode == 200){
-                        var memberDetails : MemberApiModel = Communicator.ProfileFromJson(JSON!)
-                        self.delegate!.handleUpdateProfile!(memberDetails)
-                    }else if(response!.statusCode == 400){
-                        self.validationErrorsCodes(JSON!)
-                    }else if(response!.statusCode == 401){
-                        self.delegate!.handleRefreshToken!(JSON!)
-                    }else {
-                        self.messagesErrorsCodes(JSON!)
-                    }
+        Alamofire.request(.PUT, requestUrl, parameters: utilities.getParams(profile), encoding:.JSON, headers : ["Authorization" : "Bearer \(token)"]).responseJSON
+            { response in switch response.result {
+            case .Success(let JSON):
+                print("Success with JSON: \(JSON)")
+                let jsonResp = JSON
+                if(response.response?.statusCode == 200){
+                    let memberDetails : MemberApiModel = Communicator.ProfileFromJson(jsonResp)
+                    self.delegate!.handleUpdateProfile!(memberDetails)
+                }else if(response.response?.statusCode == 400){
+                    self.validationErrorsCodes(jsonResp)
+                }else{
+                    self.messagesErrorsCodes(jsonResp)
                 }
+            case .Failure(let error):
+                print("Request failed with error: \(error)")
+            }
         }
+        
     }
     
     public func validationErrorsCodes(JSON : AnyObject){
-        var validationErrors : NSArray = Communicator.respValidationMessageCodesFromJson(JSON)
+        let validationErrors : NSArray = Communicator.respValidationMessageCodesFromJson(JSON)
         self.delegate!.handleValidationErrors!(validationErrors)
     }
     
     public func messagesErrorsCodes(JSON : AnyObject){
-        var messageCodeEntity : MessagesApiModel = Communicator.respMessageCodesFromJson(JSON)
+        let messageCodeEntity : MessagesApiModel = Communicator.respMessageCodesFromJson(JSON)
         self.delegate!.handleMessages!(messageCodeEntity)
     }
-
-
-    
 }

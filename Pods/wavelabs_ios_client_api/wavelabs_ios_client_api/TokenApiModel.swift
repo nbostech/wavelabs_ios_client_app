@@ -12,8 +12,6 @@ import UIKit
 
 public class TokenApiModel :NSObject{
     // MARK: Properties
-    
-    
     public var access_token: String = ""
     public var expires_in: Int = 0
     public var refresh_token: String = ""

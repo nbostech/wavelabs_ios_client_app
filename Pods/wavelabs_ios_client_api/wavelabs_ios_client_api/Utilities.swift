@@ -15,7 +15,7 @@ var WAVELABS_CLIENT_ID = NSBundle.mainBundle().infoDictionary?["WavelabsAPISetti
 var WAVELABS_HOST_URL = NSBundle.mainBundle().infoDictionary?["WavelabsAPISettings"]!.objectForKey("WAVELABS_BASE_URL") as! String
 var WAVELABS_CLIENT_SECRET = NSBundle.mainBundle().infoDictionary?["WavelabsAPISettings"]!.objectForKey("WAVELABS_CLIENT_SECRET") as! String
 
-
+var WAVELABS_CLIENT_ACCESS_TOKEN : String = ""
 
 public class Utilities {
 
@@ -44,10 +44,10 @@ public class Utilities {
         var parameters : [String : AnyObject] = [:]
         
         for var index = 0; index < paramsDict.allKeys.count; ++index {
-            var keysList : NSArray = paramsDict.allKeys as NSArray
+            let keysList : NSArray = paramsDict.allKeys as NSArray
             
-            var key : String = keysList.objectAtIndex(index) as! String
-            var value : String = paramsDict.objectForKey(key) as! String
+            let key : String = keysList.objectAtIndex(index) as! String
+            let value : String = paramsDict.objectForKey(key) as! String
             
             parameters[key] = value as AnyObject
         }
@@ -56,30 +56,8 @@ public class Utilities {
     }
 
     
-//    public class func getBaseUrl() -> String{
-//        var urlDict : NSDictionary = NSBundle.mainBundle().infoDictionary?["WavelabsAPISettings"] as! NSDictionary
-//        var serviceUrl : String = urlDict.objectForKey("WAVELABS_BASE_URL") as! String
-//        
-//        return serviceUrl
-//    }
-//    
-//    public class func getClientID() -> String{
-//        var urlDict : NSDictionary = NSBundle.mainBundle().infoDictionary?["WavelabsAPISettings"] as! NSDictionary
-//        var clientID : String = urlDict.objectForKey("WAVELABS_CLIENT_ID") as! String
-//        return clientID
-//    }
-//    
-//    
-//    public class func getClientSecret() -> String{
-//        var urlDict : NSDictionary = NSBundle.mainBundle().infoDictionary?["WavelabsAPISettings"] as! NSDictionary
-//        var clientSecret : String = urlDict.objectForKey("WAVELABS_CLIENT_SECRET") as! String
-//        return clientSecret
-//    }
-    
-    
     public func getClientAccessToken() -> String{
-        let token: AnyObject = NSUserDefaults.standardUserDefaults().objectForKey("access_token")!
-        return token as! String
+        return WAVELABS_CLIENT_ACCESS_TOKEN
     }
 
     

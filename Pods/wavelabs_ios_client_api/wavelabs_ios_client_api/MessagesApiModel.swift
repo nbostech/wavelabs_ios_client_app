@@ -10,8 +10,6 @@ import Foundation
 
 @objc public class MessagesApiModel:NSObject {
     // MARK: Properties
-   
     public var message : String = ""
     public var messageCode : String = ""
-    
 }

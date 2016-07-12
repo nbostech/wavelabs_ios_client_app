@@ -49,9 +49,9 @@ class DigitsSignUpVC: UIViewController,getSocialApiResponseDelegate{
     
     @IBAction func digitsSignUpBtnClicked(sender: AnyObject) {
         
-        var firstNameStr: String = firstName.text
-        var emailStr: String = email.text
-        var lastNameStr: String = lastName.text
+        let firstNameStr: String = firstName.text!
+        let emailStr: String = email.text!
+        let lastNameStr: String = lastName.text!
 
         
         
@@ -61,11 +61,11 @@ class DigitsSignUpVC: UIViewController,getSocialApiResponseDelegate{
         }else{
             
             let defaults = NSUserDefaults.standardUserDefaults()
-            var authorizationHeaders : String = defaults .objectForKey("authorizationHeaders") as! String
-            var serviceProvider : String = defaults.objectForKey("serviceProvider") as! String
+            let authorizationHeaders : String = defaults .objectForKey("authorizationHeaders") as! String
+            let serviceProvider : String = defaults.objectForKey("serviceProvider") as! String
             defaults.synchronize()
             
-            var digitsLoginDict : NSMutableDictionary = NSMutableDictionary()
+            let digitsLoginDict : NSMutableDictionary = NSMutableDictionary()
             digitsLoginDict.setObject(CLIENT_ID, forKey: "clientId")
             digitsLoginDict.setObject(authorizationHeaders, forKey: "authorization")
             digitsLoginDict.setObject(serviceProvider, forKey: "provider")
