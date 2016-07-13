@@ -19,12 +19,7 @@ import MBProgressHUD
 class LoginVC: UIViewController,UIAlertViewDelegate,UITextFieldDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate,GIDSignInUIDelegate,GIDSignInDelegate, getAuthApiResponseDelegate,getSocialApiResponseDelegate {
     
     
-    
-//    var activityIndicator: UIActivityIndicatorView = UIActivityIndicatorView()
-//    var loadingView: UIView = UIView()
-
     var hud : MBProgressHUD = MBProgressHUD()
-
     
     @IBOutlet weak var loginScrollView: UIScrollView!
     @IBOutlet weak var emailTextField: UITextField!
@@ -56,7 +51,7 @@ class LoginVC: UIViewController,UIAlertViewDelegate,UITextFieldDelegate,UIImageP
         self.title = "Login"
         
         // navigation bar background and title colors
-        var nav = self.navigationController?.navigationBar
+        let nav = self.navigationController?.navigationBar
         nav?.barStyle = UIBarStyle.Default
         nav?.tintColor = UIColor.darkGrayColor()
         nav?.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.darkGrayColor()]
@@ -80,7 +75,7 @@ class LoginVC: UIViewController,UIAlertViewDelegate,UITextFieldDelegate,UIImageP
         authApi.delegate = self
         socialApi.delegate = self
         
-        var clientTokenDict : NSMutableDictionary = NSMutableDictionary()
+        let clientTokenDict : NSMutableDictionary = NSMutableDictionary()
         clientTokenDict.setObject(CLIENT_ID, forKey: "client_id")
         clientTokenDict.setObject("client_credentials", forKey: "grant_type")
         clientTokenDict.setObject(CLIENT_SECRET, forKey: "client_secret")

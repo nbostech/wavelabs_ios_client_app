@@ -54,7 +54,6 @@ public class AuthApi {
         
         let requestUrl = "\(WAVELABS_HOST_URL)\(refreshTokenUrl)"
         
-//        Alamofire.request(.POST, requestUrl, parameters: utilities.getParams(clientTokenDict), encoding:.JSON).responseJSON
         Alamofire.request(.POST, requestUrl, parameters: utilities.getParams(clientTokenDict)).responseJSON
             { response in switch response.result {
             case .Success(let JSON):
@@ -76,7 +75,7 @@ public class AuthApi {
                 
             case .Failure(let error):
                 print("Request failed with error: \(error)")
-                }
+            }
         }
         
     }

@@ -154,5 +154,9 @@
 		<key>WAVELABS_CLIENT_SECRET</key>
 		<string>sample-app-secret</string>
 	</dict>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>fbauth2</string>
+	</array>
 </dict>
 </plist>

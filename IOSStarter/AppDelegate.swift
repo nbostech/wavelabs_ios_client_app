@@ -28,32 +28,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate,getAuthApiResponseDelegate
         GGLContext.sharedInstance().configureWithError(&configureError)
         assert(configureError == nil, "Error configuring Google services: \(configureError)")
       
-//        if(NSUserDefaults.standardUserDefaults().objectForKey("access_token") != nil) {
-//            var accessToken : String = NSUserDefaults.standardUserDefaults().objectForKey("access_token") as! String
-//            var refreshToken : String = NSUserDefaults.standardUserDefaults().objectForKey("refresh_token") as! String
-//            var startDate : NSDate = NSUserDefaults.standardUserDefaults().objectForKey("startDate") as! NSDate
-//            var expiresIn : Int = NSUserDefaults.standardUserDefaults().objectForKey("expires_in") as! Int
-//            
-//            let interval = NSDate().timeIntervalSinceDate(startDate)
-//            let intervalNum = NSNumber(double: interval)
-//
-//            
-//            if(intervalNum.doubleValue > Double(expiresIn)){
-//           
-//                var authApi : AuthApi = AuthApi()
-//                authApi.delegate = self
-//                authApi.refreshToken()
-//                
-//            }else{
-//            
-//                self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
-//                let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-//                var settingsViewController: SWRevealViewController = mainStoryboard.instantiateViewControllerWithIdentifier("RevealVC") as! SWRevealViewController
-//                
-//                self.window?.rootViewController = settingsViewController
-//                self.window?.makeKeyAndVisible()
-//            }
-//        }
         return true
     }
     
