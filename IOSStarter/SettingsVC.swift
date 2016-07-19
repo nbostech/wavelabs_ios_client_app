@@ -247,25 +247,18 @@ class SettingsVC: UIViewController,UINavigationControllerDelegate,UIImagePickerC
             }
         }
 
-
-        
-        
         let storePath = NSURL(fileURLWithPath: imageDirURL.path!).URLByAppendingPathComponent(fileName)
-
         
 //        var storePath : String = imagesDirectory.stringByAppendingPathComponent(fileName)
         
         let imgData : NSData = UIImagePNGRepresentation(selectedImg)!
 //        imgData.writeToFile(storePath, atomically: true)
         imgData.writeToURL(storePath, atomically: false)
-
         
         self.addProgreeHud()
-        mediaApi.uploadMedia("Profile", imgName: fileName, userID: userID!)
-        
+        mediaApi.uploadMedia("profile", imgName: fileName, userID: userID!)
 //        mediaApi.uploadMedia()
     }
-
     
     func imagePickerControllerDidCancel(picker: UIImagePickerController) {
         dismissViewControllerAnimated(true, completion: nil)
@@ -273,8 +266,7 @@ class SettingsVC: UIViewController,UINavigationControllerDelegate,UIImagePickerC
 
     
     // MARK: - API call response delegate
-    
-    
+
     func handleRefreshTokenResponse(tokenEntity:TokenApiModel){
         MBProgressHUD.hideHUDForView(self.view, animated: true)
         
@@ -316,7 +308,7 @@ class SettingsVC: UIViewController,UINavigationControllerDelegate,UIImagePickerC
         self.lastNameTF.text = memberEntity.lastName
         self.emailTF.text = memberEntity.email
         
-        var alert = utilities.alertView("Alert", alertMsg: "Profile updated",actionTitle: "Ok")
+        let alert = utilities.alertView("Alert", alertMsg: "Profile updated",actionTitle: "Ok")
         self.presentViewController(alert, animated: true, completion: nil)
 
         let defaults = NSUserDefaults.standardUserDefaults()
@@ -328,6 +320,8 @@ class SettingsVC: UIViewController,UINavigationControllerDelegate,UIImagePickerC
         MBProgressHUD.hideHUDForView(self.view, animated: true)
 
         let imgsArray = mediaApiResp.mediaFileDetailsList as NSArray
+        
+        print("imgsArray \(imgsArray)")
         
         for var i = 0; i < imgsArray.count; i++ {
             
@@ -358,7 +352,7 @@ class SettingsVC: UIViewController,UINavigationControllerDelegate,UIImagePickerC
     func moveToLogin(){
        
         let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        var loginVC: UINavigationController = mainStoryboard.instantiateViewControllerWithIdentifier("mainNavigation") as! UINavigationController
+        let loginVC: UINavigationController = mainStoryboard.instantiateViewControllerWithIdentifier("mainNavigation") as! UINavigationController
         self.presentViewController(loginVC, animated: true, completion: nil)
     }
     
@@ -367,21 +361,21 @@ class SettingsVC: UIViewController,UINavigationControllerDelegate,UIImagePickerC
         MBProgressHUD.hideHUDForView(self.view, animated: true)
 
         let messageStr = messageCodeEntity.message
-        var alert = utilities.alertView("Alert", alertMsg: messageStr,actionTitle: "Ok")
+        let alert = utilities.alertView("Alert", alertMsg: messageStr,actionTitle: "Ok")
         self.presentViewController(alert, animated: true, completion: nil)
     }
     
     
     func handleValidationErrors(messageCodeEntityArray: NSArray){
         MBProgressHUD.hideHUDForView(self.view, animated: true)
-        var errorMessage: NSMutableString = ""
+        let errorMessage: NSMutableString = ""
         for var i = 0; i < messageCodeEntityArray.count; i++ {
-            var messageCode : ValidationMessagesApiModel = messageCodeEntityArray.objectAtIndex(i) as! ValidationMessagesApiModel
+            let messageCode : ValidationMessagesApiModel = messageCodeEntityArray.objectAtIndex(i) as! ValidationMessagesApiModel
             let messageStr = messageCode.message
             errorMessage.appendString(messageStr)
         }
         
-        var alert = utilities.alertView("Alert", alertMsg: errorMessage as String,actionTitle: "Ok")
+        let alert = utilities.alertView("Alert", alertMsg: errorMessage as String,actionTitle: "Ok")
         self.presentViewController(alert, animated: true, completion: nil)
     }
     
@@ -394,4 +388,15 @@ class SettingsVC: UIViewController,UINavigationControllerDelegate,UIImagePickerC
 
     
 }
+
+
+extension UIImage {
+    var uncompressedPNGData: NSData      { return UIImagePNGRepresentation(self)!        }
+    var highestQualityJPEGNSData: NSData { return UIImageJPEGRepresentation(self, 1.0)!  }
+    var highQualityJPEGNSData: NSData    { return UIImageJPEGRepresentation(self, 0.75)! }
+    var mediumQualityJPEGNSData: NSData  { return UIImageJPEGRepresentation(self, 0.5)!  }
+    var lowQualityJPEGNSData: NSData     { return UIImageJPEGRepresentation(self, 0.25)! }
+    var lowestQualityJPEGNSData:NSData   { return UIImageJPEGRepresentation(self, 0.0)!  }
+}
+
 

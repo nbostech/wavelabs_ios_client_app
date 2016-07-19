@@ -79,21 +79,14 @@ public class MediaApi {
             fileName  =  NSString(format:"%@.png", userID) as String
             storePath = (imagesDirectory as NSString).stringByAppendingPathComponent(fileName)
             
-            
-            
-//            let path: String? = NSBundle.mainBundle().pathForResource("\(userID)", ofType: "png", inDirectory: "\(imagesDirectory)K")
-//            let imageFromPathTest = UIImage(contentsOfFile: path!)!
 
             let imageFromPath = UIImage(contentsOfFile: storePath)!
-//            self.myImage.image = imageFromPath
 
             let imageis: UIImage = imageFromPath
-            
-            imageData = UIImagePNGRepresentation(imageis)!
-            
-//            imageData = NSFileManager.defaultManager().contentsAtPath(storePath)!
+//            imageData = UIImagePNGRepresentation(imageis)!
+        
+            imageData = imageis.lowestQualityJPEGNSData
 
-//            imageData = UIImageJPEGRKepresentation(UIImage(contentsOfFile: storePath)!, 1)!
         }
         
         
@@ -125,8 +118,12 @@ public class MediaApi {
                         let jsonResp = JSON as! NSDictionary
                         
                         if(response.response?.statusCode == 200){
-                            let messageCodeEntity : MessagesApiModel = Communicator.respMessageCodesFromJson(jsonResp)
-                            self.delegate!.handleMessages!(messageCodeEntity)
+//                            let messageCodeEntity : MessagesApiModel = Communicator.respMessageCodesFromJson(jsonResp)
+//                            self.delegate!.handleMessages!(messageCodeEntity)
+
+                            let mediaApiEntity : MediaApiModel = Communicator.respMediaFromJson(jsonResp)
+                            self.delegate!.handleMedia!(mediaApiEntity)
+                        
                         }else if(response.response?.statusCode == 400){
                             self.validationErrorsCodes(jsonResp)
                         }else{
@@ -156,4 +153,13 @@ public class MediaApi {
         let messageCodeEntity : MessagesApiModel = Communicator.respMessageCodesFromJson(JSON)
         self.delegate!.handleMessages!(messageCodeEntity)
     }    
+}
+
+extension UIImage {
+    var uncompressedPNGData: NSData      { return UIImagePNGRepresentation(self)!        }
+    var highestQualityJPEGNSData: NSData { return UIImageJPEGRepresentation(self, 1.0)!  }
+    var highQualityJPEGNSData: NSData    { return UIImageJPEGRepresentation(self, 0.75)! }
+    var mediumQualityJPEGNSData: NSData  { return UIImageJPEGRepresentation(self, 0.5)!  }
+    var lowQualityJPEGNSData: NSData     { return UIImageJPEGRepresentation(self, 0.25)! }
+    var lowestQualityJPEGNSData:NSData   { return UIImageJPEGRepresentation(self, 0.0)!  }
 }

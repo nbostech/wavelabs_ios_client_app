@@ -9,13 +9,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "IOSStarter/LoginVC.swift"
-            timestampString = "490085741.190852"
+            filePath = "IOSStarter/SettingsVC.swift"
+            timestampString = "490270815.881246"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "78"
-            endingLineNumber = "78"
-            landmarkName = "viewDidLoad()"
+            startingLineNumber = "334"
+            endingLineNumber = "334"
+            landmarkName = "handleMedia(_:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

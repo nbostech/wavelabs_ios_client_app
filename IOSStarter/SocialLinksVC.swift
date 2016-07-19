@@ -212,15 +212,15 @@ class SocialLinksVC: UIViewController,GIDSignInUIDelegate,GIDSignInDelegate,getU
         
         var socialTypeImgName : String = ""
         
-        if(value == SOCIAL_FACEBOOK_BTN){
+        if(value.lowercaseString == SOCIAL_FACEBOOK_BTN.lowercaseString){
             socialTypeImgName = "facebook.png"
-        }else if(value == "Twitter"){
+        }else if(value.lowercaseString == "Twitter".lowercaseString){
             socialTypeImgName = "twitter.png"
-        }else if(value == SOCIAL_LINKEDIN_BTN){
+        }else if(value.lowercaseString == SOCIAL_LINKEDIN_BTN.lowercaseString){
             socialTypeImgName = "linkedin.png"
-        }else if(value == SOCIAL_GITHUB_BTN){
+        }else if(value.lowercaseString == SOCIAL_GITHUB_BTN.lowercaseString){
             socialTypeImgName = "github.png"
-        }else if(value == SOCIAL_INSTAGRAM_BTN){
+        }else if(value.lowercaseString == SOCIAL_INSTAGRAM_BTN.lowercaseString){
             socialTypeImgName = "instagram.png"
         }
         
@@ -441,7 +441,7 @@ class SocialLinksVC: UIViewController,GIDSignInUIDelegate,GIDSignInDelegate,getU
 
             for var j = 0; j < socialLinksArray.count; j++ {
                 var socailTypeStr: String = socialLinksArray.objectAtIndex(j) as! String
-                if(socailTypeStr == linkedSocialStr){
+                if(socailTypeStr.lowercaseString == linkedSocialStr.lowercaseString){
                     socialLinksArray.removeObject(socailTypeStr)
                     break
                 }else{
@@ -533,7 +533,6 @@ class SocialLinksVC: UIViewController,GIDSignInUIDelegate,GIDSignInDelegate,getU
     func handleMessages(messageCodeEntity : MessagesApiModel){
         
         MBProgressHUD.hideHUDForView(self.view, animated: true)
-        
         
         let messageStr = messageCodeEntity.message
         let alert = utilities.alertView("Alert", alertMsg: messageStr,actionTitle: "Ok")

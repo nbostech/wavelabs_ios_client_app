@@ -1477,8 +1477,8 @@
         <image name="user-avator.png" width="84" height="92"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="DCp-S8-c71"/>
+        <segue reference="joS-FA-Xi9"/>
         <segue reference="VxX-U2-la7"/>
-        <segue reference="yl0-cY-Njw"/>
-        <segue reference="Yen-CK-zry"/>
     </inferredMetricsTieBreakers>
 </document>
