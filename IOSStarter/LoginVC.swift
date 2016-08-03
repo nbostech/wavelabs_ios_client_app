@@ -190,10 +190,10 @@ class LoginVC: UIViewController,UIAlertViewDelegate,UITextFieldDelegate,UIImageP
     // MARK: - Facebook Delegate Methods
     
     @IBAction func loginFbBtnClicked(sender: AnyObject) {
-        var fbLoginManager : FBSDKLoginManager = FBSDKLoginManager()
+        let fbLoginManager : FBSDKLoginManager = FBSDKLoginManager()
         fbLoginManager.logInWithReadPermissions(["email"], fromViewController: self, handler: { (result, error) -> Void in
             if (error == nil){
-                var fbloginresult : FBSDKLoginManagerLoginResult = result
+                let fbloginresult : FBSDKLoginManagerLoginResult = result
                 
                 if(fbloginresult.grantedPermissions != nil){
                     if(fbloginresult.grantedPermissions.contains("email")){
@@ -210,7 +210,7 @@ class LoginVC: UIViewController,UIAlertViewDelegate,UITextFieldDelegate,UIImageP
         
         let fbAccessToken = FBSDKAccessToken.currentAccessToken().tokenString
         
-        var socialLoginDict : NSMutableDictionary = NSMutableDictionary()
+        let socialLoginDict : NSMutableDictionary = NSMutableDictionary()
         socialLoginDict.setObject(fbAccessToken, forKey: "accessToken")
         socialLoginDict.setObject("", forKey: "expiresIn")
         socialLoginDict.setObject(CLIENT_ID, forKey: "clientId")
@@ -426,7 +426,7 @@ class LoginVC: UIViewController,UIAlertViewDelegate,UITextFieldDelegate,UIImageP
 
         }else{
             if(responseDict["message"] != nil){
-                var alert = utilities.alertView("Alert", alertMsg: responseDict["message"] as! String, actionTitle: "Ok")
+                let alert = utilities.alertView("Alert", alertMsg: responseDict["message"] as! String, actionTitle: "Ok")
                 self.presentViewController(alert, animated: true, completion: nil)
             }
         }
@@ -441,7 +441,7 @@ class LoginVC: UIViewController,UIAlertViewDelegate,UITextFieldDelegate,UIImageP
 
         
         let messageStr = messageCodeEntity.message
-        var alert = utilities.alertView("Alert", alertMsg: messageStr,actionTitle: "Ok")
+        let alert = utilities.alertView("Alert", alertMsg: messageStr,actionTitle: "Ok")
         self.presentViewController(alert, animated: true, completion: nil)
     }
     

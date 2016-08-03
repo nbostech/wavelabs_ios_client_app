@@ -9,13 +9,29 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "IOSStarter/SettingsVC.swift"
-            timestampString = "490270815.881246"
+            filePath = "IOSStarter/SocialLinksVC.swift"
+            timestampString = "491829271.64265"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "334"
-            endingLineNumber = "334"
-            landmarkName = "handleMedia(_:)"
+            startingLineNumber = "237"
+            endingLineNumber = "237"
+            landmarkName = "createIcons(_:value:index:buttonAction:parentView:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "IOSStarter/SocialLinksVC.swift"
+            timestampString = "491829317.254196"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "235"
+            endingLineNumber = "235"
+            landmarkName = "createIcons(_:value:index:buttonAction:parentView:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

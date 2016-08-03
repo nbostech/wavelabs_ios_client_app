@@ -35,7 +35,7 @@ class SettingsVC: UIViewController,UINavigationControllerDelegate,UIImagePickerC
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        var hud : MBProgressHUD = MBProgressHUD()
+        let hud : MBProgressHUD = MBProgressHUD()
 
         
         imagePicker.delegate = self
@@ -44,7 +44,7 @@ class SettingsVC: UIViewController,UINavigationControllerDelegate,UIImagePickerC
         self.title = "Settings"
         
         // navigation bar background and title colors
-        var nav = self.navigationController?.navigationBar
+        let nav = self.navigationController?.navigationBar
         nav?.barStyle = UIBarStyle.Default
         nav?.tintColor = UIColor.darkGrayColor()
         nav?.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.darkGrayColor()]
@@ -74,7 +74,7 @@ class SettingsVC: UIViewController,UINavigationControllerDelegate,UIImagePickerC
             userID = defaults.stringForKey("user_id")! 
         }
 
-        var url = NSString(format:"%@users/%@", utilities.serviceUrl,userID) as String
+        let url = NSString(format:"%@users/%@", utilities.serviceUrl,userID) as String
         
         
         usersApi.delegate = self
@@ -89,16 +89,16 @@ class SettingsVC: UIViewController,UINavigationControllerDelegate,UIImagePickerC
     // MARK: - Button actions
 
     @IBAction func updateBtnClicked(sender: AnyObject) {
-        var firstNameStr : String = firstNameTF.text!
-        var lastNameStr : String = lastNameTF.text!
-        var emailStr : String = emailTF.text!
+        let firstNameStr : String = firstNameTF.text!
+        let lastNameStr : String = lastNameTF.text!
+        let emailStr : String = emailTF.text!
         
         if firstNameStr.isEmpty{
-            var alert = utilities.alertView("Alert", alertMsg: FIRST_NAME_IN_VALID_PLACEHOLDER,actionTitle: "Ok")
+            let alert = utilities.alertView("Alert", alertMsg: FIRST_NAME_IN_VALID_PLACEHOLDER,actionTitle: "Ok")
             self.presentViewController(alert, animated: true, completion: nil)
         }else{
             
-            var profileDict : NSMutableDictionary = NSMutableDictionary()
+            let profileDict : NSMutableDictionary = NSMutableDictionary()
             profileDict.setObject(firstNameStr, forKey: "firstName")
             profileDict.setObject(lastNameStr, forKey: "lastName")
             profileDict.setObject("", forKey: "phone")

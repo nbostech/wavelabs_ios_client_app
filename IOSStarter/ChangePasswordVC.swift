@@ -29,7 +29,7 @@ class ChangePasswordVC: UIViewController,getAuthApiResponseDelegate{
         self.title = "Change Password"
         
         // navigation bar background and title colors
-        var nav = self.navigationController?.navigationBar
+        let nav = self.navigationController?.navigationBar
         nav?.barStyle = UIBarStyle.Default
         nav?.tintColor = UIColor.darkGrayColor()
         nav?.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.darkGrayColor()]
@@ -128,7 +128,7 @@ class ChangePasswordVC: UIViewController,getAuthApiResponseDelegate{
         MBProgressHUD.hideHUDForView(self.view, animated: true)
         
         let messageStr = messageCodeEntity.message
-        var alert = utilities.alertView("Alert", alertMsg: messageStr,actionTitle: "Ok")
+        let alert = utilities.alertView("Alert", alertMsg: messageStr,actionTitle: "Ok")
         self.presentViewController(alert, animated: true, completion: nil)
     }
     
@@ -136,15 +136,15 @@ class ChangePasswordVC: UIViewController,getAuthApiResponseDelegate{
     func handleValidationErrors(messageCodeEntityArray: NSArray){
         
         MBProgressHUD.hideHUDForView(self.view, animated: true)
-        var errorMessage: NSMutableString = ""
+        let errorMessage: NSMutableString = ""
         
         for var i = 0; i < messageCodeEntityArray.count; i++ {
-            var messageCode : ValidationMessagesApiModel = messageCodeEntityArray.objectAtIndex(i) as! ValidationMessagesApiModel
+            let messageCode : ValidationMessagesApiModel = messageCodeEntityArray.objectAtIndex(i) as! ValidationMessagesApiModel
             let messageStr = messageCode.message
             errorMessage.appendString(messageStr)
         }
         
-        var alert = utilities.alertView("Alert", alertMsg: errorMessage as String,actionTitle: "Ok")
+        let alert = utilities.alertView("Alert", alertMsg: errorMessage as String,actionTitle: "Ok")
         self.presentViewController(alert, animated: true, completion: nil)
     }
     

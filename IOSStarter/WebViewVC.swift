@@ -28,7 +28,8 @@ class WebViewVC: UIViewController,UIWebViewDelegate {
         
         let cookieStorage = NSHTTPCookieStorage.sharedHTTPCookieStorage()
         let cookies = cookieStorage.cookies
-        
+        cookieStorage.cookieAcceptPolicy = .Always
+
         for cookie in cookies! {
             print("name: \(cookie.name) value: \(cookie.value)")
             NSHTTPCookieStorage.sharedHTTPCookieStorage().deleteCookie(cookie)
@@ -185,7 +186,7 @@ class WebViewVC: UIViewController,UIWebViewDelegate {
             // pass data to next view
             
             let destinationNavigationController = segue.destinationViewController as! UINavigationController
-            var targetController = destinationNavigationController.topViewController as! SocialLinksVC
+            let targetController = destinationNavigationController.topViewController as! SocialLinksVC
 
             targetController.socialLinkSuccessResponse = socialLinkSuccess
             targetController.socialLinkFailureResponse = socialLinkFailure

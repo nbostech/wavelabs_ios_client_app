@@ -175,7 +175,7 @@ class RegistrationVC: UIViewController,GIDSignInUIDelegate,GIDSignInDelegate,get
             }
         }else{
             
-            var rigisterDict : NSMutableDictionary = NSMutableDictionary()
+            let rigisterDict : NSMutableDictionary = NSMutableDictionary()
             rigisterDict.setObject(userNameStr, forKey: "username")
             rigisterDict.setObject(emailStr, forKey: "email")
             rigisterDict.setObject(passwordStr, forKey: "password")
@@ -223,7 +223,7 @@ class RegistrationVC: UIViewController,GIDSignInUIDelegate,GIDSignInDelegate,get
                 let accessToken = user.authentication.accessToken
                 
                 
-                var socialLoginDict : NSMutableDictionary = NSMutableDictionary()
+                let socialLoginDict : NSMutableDictionary = NSMutableDictionary()
                 socialLoginDict.setObject(accessToken, forKey: "accessToken")
                 socialLoginDict.setObject("", forKey: "expiresIn")
                 socialLoginDict.setObject(CLIENT_ID, forKey: "clientId")
@@ -240,10 +240,10 @@ class RegistrationVC: UIViewController,GIDSignInUIDelegate,GIDSignInDelegate,get
 
     @IBAction func loginFbBtnClicked(sender: AnyObject) {
         
-        var fbLoginManager : FBSDKLoginManager = FBSDKLoginManager()
+        let fbLoginManager : FBSDKLoginManager = FBSDKLoginManager()
         fbLoginManager.logInWithReadPermissions(["email"], fromViewController: self, handler: { (result, error) -> Void in
             if (error == nil){
-                var fbloginresult : FBSDKLoginManagerLoginResult = result
+                let fbloginresult : FBSDKLoginManagerLoginResult = result
                 
                 if(fbloginresult.grantedPermissions != nil){
                     if(fbloginresult.grantedPermissions.contains("email")){
@@ -260,7 +260,7 @@ class RegistrationVC: UIViewController,GIDSignInUIDelegate,GIDSignInDelegate,get
 
         let fbAccessToken = FBSDKAccessToken.currentAccessToken().tokenString
         
-        var socialLoginDict : NSMutableDictionary = NSMutableDictionary()
+        let socialLoginDict : NSMutableDictionary = NSMutableDictionary()
         socialLoginDict.setObject(fbAccessToken, forKey: "accessToken")
         socialLoginDict.setObject("", forKey: "expiresIn")
         socialLoginDict.setObject(CLIENT_ID, forKey: "clientId")
@@ -279,7 +279,7 @@ class RegistrationVC: UIViewController,GIDSignInUIDelegate,GIDSignInDelegate,get
         if(newApiModel.tokenApiModel != nil){
             
             var tokenEty : TokenApiModel = newApiModel.tokenApiModel
-            var memberEty : MemberApiModel = newApiModel.memberApiModel
+            let memberEty : MemberApiModel = newApiModel.memberApiModel
             let defaults = NSUserDefaults.standardUserDefaults()
             let accessToken = tokenEty.access_token
             
@@ -301,8 +301,8 @@ class RegistrationVC: UIViewController,GIDSignInUIDelegate,GIDSignInDelegate,get
         MBProgressHUD.hideHUDForView(self.view, animated: true)
         if(userEntity.tokenApiModel != nil){
             
-            var tokenEty : TokenApiModel = userEntity.tokenApiModel
-            var memberEty : MemberApiModel = userEntity.memberApiModel
+            let tokenEty : TokenApiModel = userEntity.tokenApiModel
+            let memberEty : MemberApiModel = userEntity.memberApiModel
             let defaults = NSUserDefaults.standardUserDefaults()
             let accessToken = tokenEty.access_token
             
@@ -324,22 +324,22 @@ class RegistrationVC: UIViewController,GIDSignInUIDelegate,GIDSignInDelegate,get
     func handleMessages(messageCodeEntity : MessagesApiModel){
         MBProgressHUD.hideHUDForView(self.view, animated: true)
         let messageStr = messageCodeEntity.message
-        var alert = utilities.alertView("Alert", alertMsg: messageStr,actionTitle: "Ok")
+        let alert = utilities.alertView("Alert", alertMsg: messageStr,actionTitle: "Ok")
         self.presentViewController(alert, animated: true, completion: nil)
     }
     
     
     func handleValidationErrors(messageCodeEntityArray: NSArray){
         MBProgressHUD.hideHUDForView(self.view, animated: true)
-        var errorMessage: NSMutableString = ""
+        let errorMessage: NSMutableString = ""
         
         for var i = 0; i < messageCodeEntityArray.count; i++ {
-            var messageCode : ValidationMessagesApiModel = messageCodeEntityArray.objectAtIndex(i) as! ValidationMessagesApiModel
+            let messageCode : ValidationMessagesApiModel = messageCodeEntityArray.objectAtIndex(i) as! ValidationMessagesApiModel
             let messageStr = messageCode.message
             errorMessage.appendString(messageStr)
         }
         
-        var alert = utilities.alertView("Alert", alertMsg: errorMessage as String,actionTitle: "Ok")
+        let alert = utilities.alertView("Alert", alertMsg: errorMessage as String,actionTitle: "Ok")
         self.presentViewController(alert, animated: true, completion: nil)
     }
     

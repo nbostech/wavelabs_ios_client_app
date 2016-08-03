@@ -139,8 +139,8 @@ class DigitsSignUpVC: UIViewController,getSocialApiResponseDelegate{
         
         if(userEntity.tokenApiModel != nil){
             
-            var tokenEty : TokenApiModel = userEntity.tokenApiModel
-            var memberEty : MemberApiModel = userEntity.memberApiModel
+            let tokenEty : TokenApiModel = userEntity.tokenApiModel
+            let memberEty : MemberApiModel = userEntity.memberApiModel
             let defaults = NSUserDefaults.standardUserDefaults()
             let accessToken = tokenEty.access_token
             
@@ -167,7 +167,7 @@ class DigitsSignUpVC: UIViewController,getSocialApiResponseDelegate{
         
         
         let messageStr = messageCodeEntity.message
-        var alert = utilities.alertView("Alert", alertMsg: messageStr,actionTitle: "Ok")
+        let alert = utilities.alertView("Alert", alertMsg: messageStr,actionTitle: "Ok")
         self.presentViewController(alert, animated: true, completion: nil)
     }
     
@@ -176,15 +176,15 @@ class DigitsSignUpVC: UIViewController,getSocialApiResponseDelegate{
         
         MBProgressHUD.hideHUDForView(self.view, animated: true)
         
-        var errorMessage: NSMutableString = ""
+        let errorMessage: NSMutableString = ""
         
         for var i = 0; i < messageCodeEntityArray.count; i++ {
-            var messageCode : ValidationMessagesApiModel = messageCodeEntityArray.objectAtIndex(i) as! ValidationMessagesApiModel
+            let messageCode : ValidationMessagesApiModel = messageCodeEntityArray.objectAtIndex(i) as! ValidationMessagesApiModel
             let messageStr = messageCode.message
             errorMessage.appendString(messageStr)
         }
         
-        var alert = utilities.alertView("Alert", alertMsg: errorMessage as String,actionTitle: "Ok")
+        let alert = utilities.alertView("Alert", alertMsg: errorMessage as String,actionTitle: "Ok")
         self.presentViewController(alert, animated: true, completion: nil)
     }
 

@@ -80,12 +80,12 @@ class utilities {
         }
         
         
-        var imageView = UIImageView(frame: CGRectMake(0, 0, width, height)); // set as you want
-        var image: UIImage = UIImage(named: imgName)!
+        let imageView = UIImageView(frame: CGRectMake(0, 0, width, height)); // set as you want
+        let image: UIImage = UIImage(named: imgName)!
         imageView.image = image;
         imageView.contentMode = UIViewContentMode.Center
         
-        var paddingView=UIView(frame: CGRectMake(0, 0, width, height))
+        let paddingView=UIView(frame: CGRectMake(0, 0, width, height))
         paddingView.addSubview(imageView)
 
         textField.leftViewMode = UITextFieldViewMode.Always
@@ -152,7 +152,7 @@ class utilities {
             
         }
         
-        var placeHolder=NSAttributedString(string:text, attributes:    [NSForegroundColorAttributeName : semiColor])
+        let placeHolder=NSAttributedString(string:text, attributes:    [NSForegroundColorAttributeName : semiColor])
         textField.attributedPlaceholder = placeHolder
 
     }
@@ -175,14 +175,14 @@ class utilities {
     
     class func getParamsFromDict(paramsDict : NSDictionary) -> [String: AnyObject?] {
         
-        var paramsStr = NSMutableString()
+        let paramsStr = NSMutableString()
         var parameters: [String: AnyObject?] = [:]
         
         for var index = 0; index < paramsDict.allKeys.count; ++index {
-            var keysList : NSArray = paramsDict.allKeys as NSArray
+            let keysList : NSArray = paramsDict.allKeys as NSArray
             
-            var key : String = keysList.objectAtIndex(index) as! String
-            var value : String = paramsDict.objectForKey(key) as! String
+            let key : String = keysList.objectAtIndex(index) as! String
+            let value : String = paramsDict.objectForKey(key) as! String
 
             parameters[key] = value
         }

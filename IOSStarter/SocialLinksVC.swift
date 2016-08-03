@@ -232,9 +232,9 @@ class SocialLinksVC: UIViewController,GIDSignInUIDelegate,GIDSignInDelegate,getU
         }
 
         
-        if(value == SOCIAL_GOOGLE_BTN){
+        if(value.lowercaseString == SOCIAL_GOOGLE_BTN.lowercaseString){
             
-            var googleBtn = GIDSignInButton(frame: Btnframe)
+            let googleBtn = GIDSignInButton(frame: Btnframe)
             googleBtn.style = GIDSignInButtonStyle.IconOnly
             googleBtn.colorScheme = GIDSignInButtonColorScheme.Dark
             parentView.addSubview(googleBtn)
@@ -365,7 +365,7 @@ class SocialLinksVC: UIViewController,GIDSignInUIDelegate,GIDSignInDelegate,getU
             var isButtonAction : Bool
             
             if(isLinkedAccount == true){
-                var socailActDict : SocialApiModel = socialActs.objectAtIndex(index
+                let socailActDict : SocialApiModel = socialActs.objectAtIndex(index
                     ) as! SocialApiModel
                 socialActType = socailActDict.socialType
                 isButtonAction = false
@@ -436,11 +436,11 @@ class SocialLinksVC: UIViewController,GIDSignInUIDelegate,GIDSignInDelegate,getU
     func adjustSocialLinksArray(){
         
         for var i = 0; i < socialActs.count; i++ {
-            var socailActDict : SocialApiModel = socialActs.objectAtIndex(i) as! SocialApiModel
+            let socailActDict : SocialApiModel = socialActs.objectAtIndex(i) as! SocialApiModel
             let linkedSocialStr: String = socailActDict.socialType
 
             for var j = 0; j < socialLinksArray.count; j++ {
-                var socailTypeStr: String = socialLinksArray.objectAtIndex(j) as! String
+                let socailTypeStr: String = socialLinksArray.objectAtIndex(j) as! String
                 if(socailTypeStr.lowercaseString == linkedSocialStr.lowercaseString){
                     socialLinksArray.removeObject(socailTypeStr)
                     break

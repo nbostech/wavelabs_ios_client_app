@@ -59,7 +59,7 @@ class SlideMenuVC: UIViewController,UITableViewDelegate,getAuthApiResponseDelega
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
-        var cellText: String = menuArray.objectAtIndex(indexPath.row) as! String
+        let cellText: String = menuArray.objectAtIndex(indexPath.row) as! String
         
         if(cellText == USER_LOGOUT_STR){
             self.addProgreeHud()
@@ -99,7 +99,7 @@ class SlideMenuVC: UIViewController,UITableViewDelegate,getAuthApiResponseDelega
         MBProgressHUD.hideHUDForView(self.view, animated: true)
 
         let messageStr = messageCodeEntity.message
-        var alert = utilities.alertView("Alert", alertMsg: messageStr,actionTitle: "Ok")
+        let alert = utilities.alertView("Alert", alertMsg: messageStr,actionTitle: "Ok")
         self.presentViewController(alert, animated: true, completion: nil)
     }
     
@@ -107,15 +107,15 @@ class SlideMenuVC: UIViewController,UITableViewDelegate,getAuthApiResponseDelega
     func handleValidationErrors(messageCodeEntityArray: NSArray){
         MBProgressHUD.hideHUDForView(self.view, animated: true)
 
-        var errorMessage: NSMutableString = ""
+        let errorMessage: NSMutableString = ""
         
         for var i = 0; i < messageCodeEntityArray.count; i++ {
-            var messageCode : ValidationMessagesApiModel = messageCodeEntityArray.objectAtIndex(i) as! ValidationMessagesApiModel
+            let messageCode : ValidationMessagesApiModel = messageCodeEntityArray.objectAtIndex(i) as! ValidationMessagesApiModel
             let messageStr = messageCode.message
             errorMessage.appendString(messageStr)
         }
         
-        var alert = utilities.alertView("Alert", alertMsg: errorMessage as String,actionTitle: "Ok")
+        let alert = utilities.alertView("Alert", alertMsg: errorMessage as String,actionTitle: "Ok")
         self.presentViewController(alert, animated: true, completion: nil)
     }
 
