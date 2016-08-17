@@ -57,7 +57,7 @@ public class AuthApi {
         Alamofire.request(.POST, requestUrl, parameters: utilities.getParams(clientTokenDict)).responseJSON
             { response in switch response.result {
             case .Success(let JSON):
-                print("Success with JSON: \(JSON)")
+//                print("Success with JSON: \(JSON)")
                 
                 let jsonResp = JSON as! NSDictionary
                 
@@ -88,7 +88,7 @@ public class AuthApi {
         Alamofire.request(.POST, requestUrl, parameters: utilities.getParams(login), encoding:.JSON, headers : ["Authorization" : "Bearer \(token)"]).responseJSON
             { response in switch response.result {
             case .Success(let JSON):
-                print("Success with JSON: \(JSON)")
+//                print("Success with JSON: \(JSON)")
                 
                 let jsonResp = JSON
                 if(response.response?.statusCode == 200){
@@ -113,7 +113,7 @@ public class AuthApi {
         Alamofire.request(.GET, requestUrl, parameters: nil, encoding:.JSON, headers : ["Authorization" : "Bearer \(token)"]).responseJSON
             { response in switch response.result {
             case .Success(let JSON):
-                print("Success with JSON: \(JSON)")
+//                print("Success with JSON: \(JSON)")
                 
                 let jsonResp = JSON
                 
@@ -140,7 +140,7 @@ public class AuthApi {
         Alamofire.request(.POST, requestUrl, parameters: utilities.getParams(changePsw), encoding:.JSON, headers : ["Authorization" : "Bearer \(token)"]).responseJSON
             { response in switch response.result {
             case .Success(let JSON):
-                print("Success with JSON: \(JSON)")
+//                print("Success with JSON: \(JSON)")
                 
                 let jsonResp = JSON
                 
@@ -167,7 +167,7 @@ public class AuthApi {
         Alamofire.request(.POST, requestUrl, parameters: utilities.getParams(forgotPsw), encoding:.JSON, headers : ["Authorization" : "Bearer \(token)"]).responseJSON
             { response in switch response.result {
             case .Success(let JSON):
-                print("Success with JSON: \(JSON)")
+//                print("Success with JSON: \(JSON)")
                 
                 let jsonResp = JSON
                 if(response.response?.statusCode == 200){
@@ -199,7 +199,7 @@ public class AuthApi {
         Alamofire.request(.POST, requestUrl, parameters: nil, encoding:.JSON, headers : ["Authorization" : "Bearer \(token)"]).responseJSON
             { response in switch response.result {
             case .Success(let JSON):
-                print("Success with JSON: \(JSON)")
+//                print("Success with JSON: \(JSON)")
                 
                 let jsonResp = JSON as! NSDictionary
                 if(response.response?.statusCode == 200){
